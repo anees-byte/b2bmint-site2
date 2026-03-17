@@ -1,0 +1,1889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>B2B Mint — SaaS SEO Agency That Drives Pipeline, Not Just Traffic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&display=swap" rel="stylesheet">
+<style>
+/* ════════════════════════════════════════════════
+   GLOBAL CENTER ALIGNMENT — PASTE FIRST — DO NOT OVERRIDE
+   Every section heading is centered. This cannot be
+   overridden by any section-specific rule.
+   ════════════════════════════════════════════════ */
+h1, h2 {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.eyebrow,
+[class*="eyebrow"],
+.section-label,
+.section-tag {
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+}
+.section-header,
+.section-intro,
+.section-top {
+  text-align: center !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+.section-subhead,
+.section-body,
+.intro-text,
+.hero-sub {
+  text-align: center !important;
+  max-width: 640px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.stat-block,
+.stat-item,
+.counter-block {
+  text-align: center !important;
+}
+.section-cta,
+.cta-row,
+.cta-group {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+/* ===== RESET ===== */
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;-webkit-font-smoothing:antialiased;cursor:none;background:var(--cream)}
+a{text-decoration:none;color:inherit;cursor:none}
+button{border:none;background:none;cursor:none;font-family:inherit}
+ul,ol{list-style:none}
+img{max-width:100%;display:block}
+
+/* ===== CSS VARIABLES ===== */
+:root{
+  /* Brand Mints */
+  --mint-primary:#3EB489;
+  --mint-light:#C8F0DC;
+  --mint-accent:#00E896;
+  --mint-dim:rgba(62,180,137,0.18);
+  --mint-glow:rgba(0,232,150,0.22);
+  /* Base Surfaces */
+  --cream:#F4F0E8;
+  --cream-dark:#E8E3D8;
+  /* Hero & Dark Panel Surfaces */
+  --hero-bg:#1A3D2E;
+  --hero-panel:rgba(8,28,20,0.75);
+  --hero-panel-alt:rgba(14,48,34,0.65);
+  --hero-border:rgba(62,180,137,0.55);
+  --hero-border-strong:rgba(0,232,150,0.8);
+  /* Type */
+  --ink:#1C1C1A;
+  --ink-light:#3D3D38;
+  --warm-gray:#6E6D65;
+  --text-on-dark:#F4F0E8;
+  /* Accents */
+  --gold:#C9973A;
+  --sky:#8ACDE8;
+  --butter:#EDD876;
+  --blush:#E8A890;
+}
+
+/* ===== FONT VARIABLES ===== */
+:root{
+  --font-primary:'Space Grotesk','Inter',sans-serif;
+  --font-secondary:'DM Sans',system-ui,sans-serif;
+}
+
+/* ===== TYPOGRAPHY ===== */
+.f-hero{font-family:var(--font-primary);font-weight:700;font-size:clamp(56px,6vw,88px);line-height:1.04;letter-spacing:-0.03em;color:var(--cream);max-width:900px}
+.f-h2{font-family:var(--font-primary);font-weight:700;font-size:clamp(40px,4.5vw,56px);line-height:1.08;letter-spacing:-0.025em;max-width:720px}
+.f-h3{font-family:var(--font-primary);font-weight:600;font-size:clamp(22px,2.2vw,30px);line-height:1.2;letter-spacing:-0.01em}
+.f-h4{font-family:var(--font-primary);font-weight:600;font-size:clamp(18px,1.8vw,22px);line-height:1.3}
+.f-body{font-family:var(--font-secondary);font-weight:400;font-size:18px;line-height:1.78;color:var(--ink-light);max-width:640px}
+.f-body-md{font-family:var(--font-secondary);font-weight:500;font-size:18px;line-height:1.78;color:var(--ink-light);max-width:640px}
+.f-eye{font-family:var(--font-primary);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.18em;color:var(--mint-primary)}
+.f-stat{font-family:var(--font-primary);font-weight:700;font-size:clamp(52px,5.5vw,80px);line-height:1;letter-spacing:-0.03em;font-variant-numeric:tabular-nums}
+.f-btn{font-family:var(--font-primary);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.08em}
+.f-nav{font-family:var(--font-primary);font-weight:500;font-size:15px;letter-spacing:0.01em}
+.f-caption{font-family:var(--font-secondary);font-weight:400;font-size:14px;line-height:1.5;color:var(--warm-gray)}
+
+/* ===== SECTION HEADER CENTERING (ABSOLUTE RULE) ===== */
+.section-header{text-align:center;margin-bottom:48px}
+.section-header .f-eye{margin-bottom:16px}
+.section-header .f-eye::before{content:'';display:block;width:36px;height:3px;background:var(--mint-accent);border-radius:2px;margin:0 auto 12px}
+.section-header .f-h2{margin-top:0}
+.section-header .f-body{margin-left:auto;margin-right:auto}
+
+/* ===== LAYOUT ===== */
+.container{max-width:1160px;margin:0 auto;padding:0 40px}
+section{position:relative}
+
+/* ===== GRAIN ===== */
+body::after{
+  content:'';position:fixed;inset:0;
+  background:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity:0.018;pointer-events:none;z-index:99998;
+}
+
+/* ===== CURSOR ===== */
+.cursor-dot{
+  position:fixed;width:10px;height:10px;
+  background:var(--mint-accent);border-radius:50%;
+  pointer-events:none;transform:translate(-50%,-50%);
+  transition:width .2s ease,height .2s ease,opacity .2s ease;
+  z-index:99999;mix-blend-mode:multiply;
+}
+.cursor-dot.big{width:36px;height:36px;opacity:0.55}
+@media(max-width:768px){.cursor-dot{display:none}body,a,button{cursor:auto}}
+
+/* ===== ANIMATIONS ===== */
+@keyframes float-a{
+  0%,100%{transform:translateY(0) rotate(0deg)}
+  35%{transform:translateY(-6px) rotate(0.6deg)}
+  70%{transform:translateY(3px) rotate(-0.4deg)}
+}
+@keyframes float-b{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-9px)}
+}
+@keyframes sway{
+  0%,100%{transform:rotate(-2.5deg)}
+  50%{transform:rotate(2.5deg)}
+}
+@keyframes pulse{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.06)}
+}
+@keyframes spin-slow{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+@keyframes march{
+  to{stroke-dashoffset:-18}
+}
+@keyframes breathe{
+  0%,100%{opacity:0.9}
+  50%{opacity:0.3}
+}
+@keyframes wobble{
+  0%{transform:rotate(0deg) scale(1)}
+  20%{transform:rotate(-2deg) scale(1.02)}
+  65%{transform:rotate(1.5deg) scale(1.01)}
+  100%{transform:rotate(0deg) scale(1)}
+}
+@keyframes slideUp{
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes flow-right{
+  0%{transform:translateX(0);opacity:0}
+  15%{opacity:1}
+  85%{opacity:1}
+  100%{transform:translateX(80px);opacity:0}
+}
+@keyframes orbit{
+  from{transform:rotate(var(--start-angle,0deg)) translateX(70px) rotate(calc(-1 * var(--start-angle,0deg)))}
+  to{transform:rotate(calc(var(--start-angle,0deg) + 360deg)) translateX(70px) rotate(calc(-1 * (var(--start-angle,0deg) + 360deg)))}
+}
+@keyframes fill-bar{
+  0%{width:0%}
+  100%{width:78%}
+}
+@keyframes gear-spin{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal{
+  opacity:0;transform:translateY(30px);
+  transition:opacity 0.75s ease,transform 0.75s cubic-bezier(0.16,1,0.3,1);
+  transition-delay:calc(var(--i,0)*85ms);
+}
+.reveal.in-view{opacity:1;transform:translateY(0)}
+
+/* ===== DRAW PATH ===== */
+.draw-path{
+  stroke-dasharray:var(--len,400);
+  stroke-dashoffset:var(--len,400);
+  transition:stroke-dashoffset 1.1s cubic-bezier(0.16,1,0.3,1);
+  transition-delay:var(--d,0ms);
+}
+.in-view .draw-path,.hero-loaded .draw-path{stroke-dashoffset:0}
+
+/* ===== CHART BAR ===== */
+.chart-bar{
+  transform-origin:bottom center;transform:scaleY(0);
+  transition:transform 0.85s cubic-bezier(0.16,1,0.3,1);
+}
+.chart-bar:nth-child(2){transition-delay:120ms}
+.chart-bar:nth-child(3){transition-delay:260ms}
+.chart-bar:nth-child(4){transition-delay:400ms}
+.in-view .chart-bar{transform:scaleY(1)}
+
+/* ===== DASHED MARCH ===== */
+.dashed-march{
+  stroke-dasharray:5 4;stroke-dashoffset:0;
+  animation:march 0.9s linear infinite;
+}
+
+/* ===== BUTTONS ===== */
+.btn{
+  display:inline-block;padding:16px 36px;
+  border:2px solid var(--mint-primary);border-radius:3px;
+  box-shadow:2px 3px 0 var(--ink);
+  transition:all 0.2s ease-in-out;
+  text-decoration:none;
+}
+.btn:hover{animation:wobble 0.4s cubic-bezier(0.36,0.07,0.19,0.97) both;background:var(--mint-accent);border-color:var(--mint-accent);box-shadow:0 0 16px var(--mint-glow)}
+.btn:focus-visible{outline:2px solid var(--mint-accent);outline-offset:2px}
+.btn-mint{background:var(--mint-primary);color:var(--text-on-dark)}
+.btn-cream{background:var(--cream);color:var(--ink);border-color:var(--ink);box-shadow:2px 3px 0 var(--ink)}
+.btn-cream:hover{background:var(--mint-accent);color:var(--ink);border-color:var(--mint-accent)}
+.btn-outline{background:transparent;border-color:var(--cream);color:var(--cream)}
+.btn-outline:hover{border-color:var(--mint-accent);color:var(--cream)}
+.btn-outline-mint{background:transparent;border-color:var(--mint-primary);color:var(--mint-primary);box-shadow:none}
+.btn-outline-mint:hover{border-color:var(--mint-accent);color:var(--mint-accent)}
+
+/* ===== UNDERLINE WORD ===== */
+.underline-word{position:relative;display:inline-block}
+.ul-svg{display:block;width:100%;height:14px;margin-top:-2px}
+
+/* ===== WAVY DIVIDER ===== */
+.wave-div{position:relative;z-index:2;margin-top:-1px}
+.wave-div svg{display:block;width:100%;height:44px}
+
+/* ===== REDUCED MOTION ===== */
+@media(prefers-reduced-motion:reduce){
+  .reveal{transition-duration:0.3s!important}
+  .draw-path{transition-duration:0.3s!important}
+  *{animation-duration:0.01ms!important;animation-iteration-count:1!important}
+}
+
+/* ===== ACCESSIBILITY ===== */
+a:focus-visible,button:focus-visible{outline:2px solid var(--mint-accent);outline-offset:2px}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar{width:8px}
+::-webkit-scrollbar-track{background:var(--cream)}
+::-webkit-scrollbar-thumb{background:var(--mint-primary);border-radius:4px}
+
+/* ===== NAV ===== */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:var(--cream);padding:20px 0;transition:padding 0.3s ease-in-out,background 0.3s ease-in-out,box-shadow 0.3s ease-in-out}
+.nav.scrolled{padding:10px 0;background:rgba(244,240,232,0.93);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 1px 0 rgba(28,28,26,0.07)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;max-width:1160px;margin:0 auto;padding:0 40px}
+.nav-logo{font-family:var(--font-primary);font-weight:700;font-size:22px;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:1px;letter-spacing:-0.02em}
+.nav-leaf{display:inline-block}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-family:var(--font-primary);font-weight:500;font-size:15px;letter-spacing:0.01em;color:var(--ink-light);position:relative;transition:color 0.25s ease-in-out}
+.nav-links a::after{content:'';display:block;height:1.5px;background:var(--mint-primary);transform:scaleX(0);transform-origin:left;transition:transform 0.25s ease-in-out}
+.nav-links a:hover{color:var(--mint-accent)}
+.nav-links a:hover::after{transform:scaleX(1)}
+.nav-cta{font-family:var(--font-primary);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;background:var(--mint-primary);color:var(--cream);border:2px solid var(--ink);border-radius:3px;box-shadow:2px 3px 0 var(--ink);padding:10px 20px;text-decoration:none;transition:transform 0.2s ease-in-out}
+.nav-cta:hover{animation:wobble 0.4s cubic-bezier(0.36,0.07,0.19,0.97) both}
+.nav-mob{display:none;background:none;border:none;padding:8px}
+.nav-mob span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:0.3s ease-in-out}
+
+@media(max-width:900px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--cream);padding:24px 40px;gap:20px;box-shadow:0 4px 16px rgba(28,28,26,0.08)}
+  .nav-links.open{display:flex}
+  .nav-mob{display:block}
+}
+
+/* ===== HERO ===== */
+.hero{background:var(--hero-bg);background-image:radial-gradient(ellipse 80% 60% at 50% 40%,rgba(62,180,137,0.18) 0%,transparent 70%);padding:140px 0 0;min-height:100vh;display:flex;flex-direction:column}
+.hero-top{text-align:center;margin-bottom:48px}
+.hero-intro{font-family:var(--font-secondary);font-style:italic;font-weight:400;color:rgba(244,240,232,0.85);font-size:18px;line-height:1.78;margin-top:24px;max-width:520px;margin-left:auto;margin-right:auto}
+.hero h1{margin-left:auto;margin-right:auto}
+.hero h1 .line{display:block;opacity:0;transform:translateY(30px);animation:slideUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards}
+.hero h1 .line:nth-child(1){animation-delay:0.1s}
+.hero h1 .line:nth-child(2){animation-delay:0.25s}
+.hero h1 .line:nth-child(3){animation-delay:0.4s}
+.hero h1 .line:nth-child(4){animation-delay:0.55s}
+.hero-sub{font-family:var(--font-secondary);font-weight:400;color:rgba(244,240,232,0.9);font-size:19px;line-height:1.78;max-width:600px;margin:16px auto 0;opacity:0;animation:slideUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards;animation-delay:0.7s}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center;margin-top:40px;opacity:0;animation:slideUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards;animation-delay:0.85s}
+.hero-btn-primary{display:inline-block;padding:16px 36px;background:var(--mint-accent);color:var(--ink);border:2px solid var(--mint-accent);border-radius:3px;font-family:var(--font-primary);font-weight:700;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;text-decoration:none;box-shadow:0 0 20px var(--mint-glow);transition:all 0.2s ease-in-out}
+.hero-btn-primary:hover{animation:wobble 0.4s cubic-bezier(0.36,0.07,0.19,0.97) both}
+.hero-btn-secondary{display:inline-block;padding:14px 28px;background:transparent;border:1.5px solid rgba(244,240,232,0.5);border-radius:3px;font-family:var(--font-primary);font-weight:500;font-size:14px;color:var(--text-on-dark);text-decoration:none;transition:border-color 0.2s ease-in-out}
+.hero-btn-secondary:hover{border-color:var(--mint-accent)}
+.hero-eye{font-family:var(--font-primary);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:0.22em;color:var(--mint-accent);margin-bottom:16px;opacity:0;animation:slideUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards;animation-delay:0s}
+
+/* ASTPE Animation */
+.astpe{max-width:1060px;margin:64px auto 0;display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:0;align-items:center;opacity:0;animation:slideUp 1s cubic-bezier(0.16,1,0.3,1) forwards;animation-delay:1.1s;padding-bottom:80px}
+.astpe-col{background:var(--hero-panel);border:1.5px solid var(--hero-border);border-radius:12px;padding:28px 24px;box-shadow:0 4px 24px rgba(0,0,0,0.4),inset 0 0 0 1px rgba(62,180,137,0.1)}
+.astpe-col-label{font-family:var(--font-primary);font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:0.22em;color:var(--mint-accent);text-align:center;margin-bottom:16px}
+.astpe-pill{background:rgba(62,180,137,0.12);border:1px solid rgba(62,180,137,0.45);border-radius:8px;padding:10px 16px;display:flex;align-items:center;gap:10px;margin-bottom:10px;transition:background 0.2s ease,border-color 0.2s ease}
+.astpe-pill:last-child{margin-bottom:0}
+.astpe-pill:hover{background:rgba(62,180,137,0.22);border-color:var(--mint-accent)}
+.astpe-pill-label{font-family:var(--font-primary);font-weight:600;font-size:14px;color:var(--text-on-dark)}
+.astpe-chip{background:rgba(62,180,137,0.12);border:1px solid rgba(62,180,137,0.45);border-radius:8px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;transition:background 0.2s ease,border-color 0.2s ease}
+.astpe-chip:hover{background:rgba(62,180,137,0.22);border-color:var(--mint-accent)}
+.astpe-chip:last-of-type{margin-bottom:0}
+.astpe-chip-left{display:flex;align-items:center;gap:10px}
+.astpe-chip-label{font-family:var(--font-primary);font-weight:600;font-size:14px;color:var(--text-on-dark)}
+.astpe-chip-arrow{font-size:10px;color:var(--mint-accent)}
+.astpe-connector{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 8px;gap:4px}
+.astpe-connector-label{font-family:var(--font-primary);font-weight:700;font-size:9px;color:var(--mint-accent);letter-spacing:0.15em;text-transform:uppercase}
+.astpe-engine{background:var(--hero-panel-alt);border:2px solid var(--hero-border-strong);border-radius:16px;padding:32px 28px;box-shadow:0 0 0 1px rgba(0,232,150,0.15),0 0 40px rgba(0,232,150,0.25),0 8px 32px rgba(0,0,0,0.5);min-width:280px;flex-shrink:0}
+.astpe-engine-brand{font-family:var(--font-primary);font-weight:700;font-size:11px;text-transform:uppercase;color:var(--mint-accent);letter-spacing:0.2em;text-align:center}
+.astpe-engine-title{font-family:var(--font-primary);font-weight:700;font-size:22px;color:var(--text-on-dark);text-align:center;margin-top:4px}
+.astpe-engine-svg{display:block;margin:24px auto;width:200px;height:200px}
+.astpe-engine-labels{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:16px}
+.astpe-engine-label{font-family:var(--font-primary);font-weight:700;font-size:10px;text-transform:uppercase;letter-spacing:0.12em;color:var(--mint-accent);display:flex;align-items:center;gap:6px}
+.astpe-engine-label::before{content:'◉';color:var(--mint-accent)}
+.astpe-meter{margin-top:20px}
+.astpe-meter-text{font-family:var(--font-primary);font-weight:700;font-size:11px;color:var(--mint-accent);text-align:right;margin-bottom:6px}
+.astpe-meter-track{background:rgba(62,180,137,0.15);border:1px solid rgba(62,180,137,0.3);border-radius:4px;height:6px;overflow:hidden}
+.astpe-meter-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--mint-primary),var(--mint-accent));box-shadow:0 0 8px var(--mint-glow);animation:fill-bar 3s cubic-bezier(0.16,1,0.3,1) 1s both}
+.astpe-particles{position:relative;height:20px;width:80px;margin:0 auto}
+.astpe-particle{position:absolute;width:6px;height:6px;border-radius:50%;background:var(--mint-accent);box-shadow:0 0 6px var(--mint-accent);animation:flow-right 2s linear infinite}
+.astpe-particle:nth-child(2){animation-delay:0.5s}
+.astpe-particle:nth-child(3){animation-delay:1s}
+.astpe-particle:nth-child(4){animation-delay:1.5s}
+
+@media(max-width:900px){
+  .hero{padding-top:100px;min-height:auto}
+  .astpe{grid-template-columns:1fr;gap:16px;padding:0 20px 60px}
+  .astpe-connector{flex-direction:row;padding:8px 0}
+  .astpe-connector svg{transform:rotate(90deg)}
+  .astpe-engine{min-width:auto}
+}
+
+/* ===== STATS STRIP ===== */
+.stats-strip{background:var(--ink);padding:24px 0}
+.stats-strip-inner{display:flex;justify-content:center;gap:0}
+.stat-strip-item{flex:1;display:flex;align-items:center;gap:16px;padding:0 32px;border-right:1px solid rgba(244,240,232,0.1)}
+.stat-strip-item:last-child{border-right:none}
+.stat-strip-icon{flex-shrink:0}
+.stat-strip-text{font-family:var(--font-secondary);font-weight:400;font-size:15px;color:var(--warm-gray);line-height:1.6}
+@media(max-width:900px){
+  .stats-strip-inner{flex-direction:column;gap:16px;align-items:center}
+  .stat-strip-item{border-right:none;border-bottom:1px solid rgba(244,240,232,0.1);padding:16px 0;justify-content:center}
+  .stat-strip-item:last-child{border-bottom:none}
+}
+
+/* ===== TESTIMONIAL PULL ===== */
+.testi-pull{background:var(--mint-primary);padding:48px 40px;text-align:center}
+.testi-pull-quote{font-family:var(--font-secondary);font-weight:500;font-style:italic;font-size:clamp(18px,2vw,22px);line-height:1.55;color:var(--cream);max-width:780px;margin:0 auto 16px}
+.testi-pull-attr{font-family:var(--font-primary);font-weight:600;font-size:11px;color:rgba(244,240,232,0.65);letter-spacing:0.15em;text-transform:uppercase}
+
+/* ===== PAIN SECTION ===== */
+.pain-sec{background:var(--cream);padding:120px 0}
+.pain-header{text-align:center;margin-bottom:64px}
+.pain-header .f-h2{color:var(--ink);margin-top:16px;margin-bottom:16px}
+.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.pain-card{background:var(--cream-dark);border:1.5px solid var(--ink);border-radius:4px;padding:40px 32px;transform:rotate(-0.5deg);transition:transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out}
+.pain-card:nth-child(2){transform:rotate(0.3deg)}
+.pain-card:nth-child(3){transform:rotate(0.5deg)}
+.pain-card:nth-child(4){transform:rotate(-0.8deg)}
+.pain-card:hover{transform:rotate(0deg) translateY(-5px);box-shadow:3px 6px 0 var(--ink)}
+.pain-card .icon-w{width:72px;height:72px;margin-bottom:20px}
+.pain-card .f-eye{margin-bottom:8px}
+.pain-card .f-h3{color:var(--ink);margin-bottom:10px}
+.pain-card .f-body{font-size:16px;line-height:1.65}
+.pain-callout{text-align:center;margin-top:48px;font-family:var(--font-secondary);font-style:italic;font-weight:400;font-size:18px;line-height:1.78;color:var(--ink-light);max-width:640px;margin-left:auto;margin-right:auto}
+
+@media(max-width:768px){
+  .pain-sec{padding:80px 0}
+  .pain-grid{grid-template-columns:1fr}
+  .pain-card{transform:rotate(0)!important}
+}
+
+/* ===== SOLUTION SECTION ===== */
+.solution-sec{background:var(--mint-light);padding:120px 0}
+.solution-header{text-align:center;margin-bottom:56px}
+.solution-header .f-h2{color:var(--ink);margin-top:16px;margin-bottom:16px}
+.solution-header .f-body{margin:0 auto}
+.feature-row{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:56px 0;border-bottom:1px solid rgba(62,180,137,0.3)}
+.feature-row:last-child{border-bottom:none}
+.feature-row.reverse{direction:rtl}
+.feature-row.reverse>*{direction:ltr}
+.feature-row .f-eye{margin-bottom:12px}
+.feature-row .f-h3{color:var(--ink);margin-bottom:12px}
+.feature-row .f-body{font-size:17px}
+.feature-ill svg{width:100%;max-width:320px;height:auto;overflow:visible}
+.solution-closing{text-align:center;margin-top:48px;font-family:var(--font-secondary);font-style:italic;font-weight:400;font-size:18px;line-height:1.78;color:var(--ink-light);max-width:640px;margin-left:auto;margin-right:auto}
+
+@media(max-width:768px){
+  .solution-sec{padding:80px 0}
+  .feature-row,.feature-row.reverse{grid-template-columns:1fr;direction:ltr;gap:32px}
+  .feature-ill{order:-1}
+}
+
+/* ===== CASE STUDY ===== */
+.case-sec{background:var(--ink);padding:120px 0;color:var(--cream)}
+.case-header{text-align:center;margin-bottom:48px}
+.case-header .f-h2{color:var(--cream);margin-top:16px;margin-bottom:12px}
+.case-header .f-body{color:var(--warm-gray);margin:0 auto}
+.case-stats{display:flex;justify-content:center;gap:0;flex-wrap:wrap;margin-bottom:48px}
+.case-stat{text-align:center;padding:0 32px;border-right:1px solid rgba(244,240,232,0.1)}
+.case-stat:last-child{border-right:none}
+.case-stat .num{font-family:var(--font-primary);font-weight:700;font-size:clamp(36px,4vw,56px);color:var(--mint-accent);font-variant-numeric:tabular-nums;letter-spacing:-0.03em;line-height:1}
+.case-stat .lbl{font-family:var(--font-primary);font-weight:600;font-size:11px;color:var(--warm-gray);letter-spacing:0.18em;text-transform:uppercase;margin-top:4px}
+.case-chart{max-width:500px;margin:0 auto 48px}
+.case-chart svg{width:100%;height:auto}
+.case-ctas{display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+
+@media(max-width:768px){
+  .case-sec{padding:80px 0}
+  .case-stats{flex-direction:column;gap:24px}
+  .case-stat{border-right:none;border-bottom:1px solid rgba(244,240,232,0.1);padding:16px 0}
+  .case-stat:last-child{border-bottom:none}
+}
+
+/* ===== ABOUT ===== */
+.about-sec{background:var(--cream);padding:120px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.about-stats{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
+.about-stat .num{font-family:var(--font-primary);font-weight:700;font-size:clamp(32px,3vw,48px);color:var(--mint-primary);font-variant-numeric:tabular-nums;letter-spacing:-0.03em;line-height:1}
+.about-stat .lbl{font-family:var(--font-primary);font-weight:600;font-size:11px;color:var(--warm-gray);letter-spacing:0.18em;text-transform:uppercase;margin-top:4px}
+.about-ill svg{width:100%;max-width:340px;height:auto;overflow:visible}
+@media(max-width:768px){
+  .about-sec{padding:80px 0}
+  .about-grid{grid-template-columns:1fr}
+  .about-ill{display:none}
+}
+
+/* ===== COMPARISON ===== */
+.compare-sec{background:var(--mint-light);padding:120px 0}
+.compare-header{text-align:center;margin-bottom:56px}
+.compare-header .f-h2{color:var(--ink);margin-top:16px;margin-bottom:12px}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.compare-col-head{display:flex;align-items:center;gap:12px;margin-bottom:24px}
+.compare-col-head h3{font-family:var(--font-primary);font-weight:600;font-size:22px;letter-spacing:-0.01em;color:var(--ink)}
+.compare-item{padding:20px;border-radius:4px;margin-bottom:12px;display:flex;gap:12px;align-items:flex-start}
+.compare-item-bad{background:var(--cream-dark);border:1px solid rgba(28,28,26,0.1)}
+.compare-item-good{background:var(--cream);border:2px solid var(--mint-primary);box-shadow:2px 3px 0 var(--mint-primary)}
+.compare-item p{font-family:var(--font-secondary);font-weight:400;font-size:16px;line-height:1.7;color:var(--ink-light)}
+.compare-icon{flex-shrink:0;width:24px;height:24px}
+@media(max-width:768px){
+  .compare-sec{padding:80px 0}
+  .compare-grid{grid-template-columns:1fr}
+}
+
+/* ===== SERVICES ===== */
+.services-sec{background:var(--cream-dark);padding:120px 0}
+.services-header{text-align:center;margin-bottom:56px}
+.services-header .f-h2{color:var(--ink);margin-top:16px;margin-bottom:16px}
+.services-header .f-body{margin:0 auto}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.svc-card{background:var(--cream);border:2px solid var(--ink);border-radius:4px;box-shadow:2px 3px 0 var(--ink);padding:32px 24px;position:relative;overflow:hidden;transition:background 0.3s ease-in-out,box-shadow 0.3s ease-in-out,transform 0.3s ease-in-out}
+.svc-card::before{content:'';position:absolute;top:0;left:0;width:14px;height:14px;background:var(--mint-primary)}
+.svc-card:hover{background:var(--mint-light);box-shadow:3px 5px 0 var(--ink);transform:translateY(-4px)}
+.svc-card .icon-w{width:56px;height:56px;margin-bottom:16px}
+.svc-card .f-eye{margin-bottom:6px;font-size:10px}
+.svc-card .f-h3{color:var(--ink);margin-bottom:8px;font-size:19px}
+.svc-card .f-body{font-size:15px;line-height:1.6;max-width:none}
+.services-cta{text-align:center;margin-top:48px}
+.services-note{text-align:center;margin-top:16px;font-family:var(--font-secondary);font-style:italic;font-weight:400;font-size:16px;line-height:1.7;color:var(--warm-gray)}
+
+@media(max-width:1024px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:768px){
+  .services-sec{padding:80px 0}
+  .services-grid{grid-template-columns:1fr}
+}
+
+/* ===== PROCESS ===== */
+.process-sec{background:var(--mint-primary);padding:120px 0}
+.process-header{text-align:center;margin-bottom:64px}
+.process-header .f-eye{color:rgba(244,240,232,0.55)}
+.process-header .f-h2{color:var(--cream);margin-top:16px}
+.process-steps{display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;gap:0;align-items:start}
+.step-card{background:var(--cream);border-radius:4px;padding:44px 28px;text-align:center;position:relative}
+.step-card:nth-child(1){transform:rotate(-1.5deg)}
+.step-card:nth-child(3){transform:rotate(-0.5deg)}
+.step-card:nth-child(5){transform:rotate(0.5deg)}
+.step-card:nth-child(7){transform:rotate(1.5deg)}
+.step-num{font-family:var(--font-primary);font-weight:700;font-size:80px;color:var(--mint-primary);opacity:0.15;line-height:1;letter-spacing:-0.03em;position:absolute;top:8px;left:16px}
+.step-card .icon-w{width:100px;height:100px;margin:0 auto 16px}
+.step-card .f-h3{color:var(--ink);margin-bottom:10px}
+.step-card .f-body{font-size:15px;line-height:1.6;max-width:260px;margin:0 auto}
+.step-arrow{display:flex;align-items:center;justify-content:center;padding:0 4px;padding-top:80px}
+.process-cta{text-align:center;margin-top:48px}
+
+@media(max-width:900px){
+  .process-sec{padding:80px 0}
+  .process-steps{grid-template-columns:1fr;gap:24px}
+  .step-card{transform:rotate(0)!important}
+  .step-arrow{display:none}
+}
+
+/* ===== INVESTMENT ===== */
+.invest-sec{background:var(--cream);padding:120px 0}
+.invest-header{text-align:center;margin-bottom:48px}
+.invest-header .f-h2{color:var(--ink);margin-top:16px;margin-bottom:12px}
+.invest-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:48px}
+.invest-col-label{font-family:var(--font-primary);font-weight:600;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink);margin-bottom:20px}
+.invest-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px}
+.invest-item p{font-family:var(--font-secondary);font-weight:400;font-size:17px;color:var(--ink-light);line-height:1.7}
+.invest-icon{flex-shrink:0;width:24px;height:24px}
+.pricing-card{background:var(--ink);border-radius:6px;padding:56px;color:var(--cream);position:relative;overflow:hidden;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+.pricing-card .f-eye{color:var(--mint-primary);margin-bottom:12px}
+.pricing-price{font-family:var(--font-primary);font-weight:700;font-size:clamp(40px,4vw,64px);letter-spacing:-0.03em;color:var(--cream);margin-bottom:8px}
+.pricing-sub{font-family:var(--font-secondary);font-style:italic;font-weight:400;color:var(--warm-gray);font-size:17px;line-height:1.6;margin-bottom:16px}
+.pricing-note{font-family:var(--font-secondary);font-weight:400;font-size:14px;line-height:1.5;color:var(--warm-gray);max-width:400px;margin-bottom:24px}
+.pricing-ill{width:140px}
+@media(max-width:768px){
+  .invest-sec{padding:80px 0}
+  .invest-grid{grid-template-columns:1fr}
+  .pricing-card{grid-template-columns:1fr;text-align:center}
+  .pricing-ill{display:none}
+}
+
+/* ===== WHO THIS IS FOR ===== */
+.fit-sec{background:var(--mint-light);padding:120px 0}
+.fit-header{text-align:center;margin-bottom:48px}
+.fit-header .f-h2{color:var(--ink);margin-top:16px}
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.fit-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:16px}
+.fit-item p{font-family:var(--font-secondary);font-weight:400;font-size:16px;line-height:1.7;color:var(--ink-light)}
+.fit-item-bad p{font-style:italic;color:var(--warm-gray)}
+.fit-icon{flex-shrink:0;width:24px;height:24px}
+.fit-cta{text-align:center;margin-top:48px}
+@media(max-width:768px){
+  .fit-sec{padding:80px 0}
+  .fit-grid{grid-template-columns:1fr}
+}
+
+/* ===== TEAM ===== */
+.team-sec{background:var(--cream-dark);padding:120px 0}
+.team-header{text-align:center;margin-bottom:56px}
+.team-header .f-h2{color:var(--ink);margin-top:16px}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.team-card{background:var(--cream);border:2px solid var(--ink);border-radius:4px;padding:32px 24px;text-align:center;transition:transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out}
+.team-card:nth-child(odd){transform:rotate(-0.5deg)}
+.team-card:nth-child(even){transform:rotate(0.5deg)}
+.team-card:hover{transform:rotate(0deg) translateY(-4px);box-shadow:3px 5px 0 var(--ink)}
+.team-avatar{width:64px;height:64px;margin:0 auto 12px}
+.team-name{font-family:var(--font-primary);font-weight:600;font-size:18px;letter-spacing:-0.01em;color:var(--ink)}
+.team-role{font-family:var(--font-primary);font-weight:600;font-size:11px;color:var(--mint-primary);text-transform:uppercase;letter-spacing:0.18em;margin:4px 0 8px}
+.team-bio{font-family:var(--font-secondary);font-weight:400;font-size:14px;color:var(--warm-gray);line-height:1.5}
+@media(max-width:768px){
+  .team-sec{padding:80px 0}
+  .team-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){.team-grid{grid-template-columns:1fr}}
+
+/* ===== FOUNDER CTA ===== */
+.founder-sec{background:var(--ink);padding:120px 0;color:var(--cream)}
+.founder-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.founder-list{margin:24px 0}
+.founder-list-item{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px}
+.founder-list-item p{font-family:var(--font-secondary);font-weight:400;font-size:17px;color:rgba(244,240,232,0.85);line-height:1.7}
+.founder-quote{background:var(--mint-primary);border-radius:4px;padding:32px;margin:32px 0}
+.founder-quote p{font-family:var(--font-secondary);font-weight:400;font-style:italic;font-size:22px;color:var(--cream);line-height:1.5;margin-bottom:12px}
+.founder-quote span{font-family:var(--font-primary);font-weight:600;font-size:11px;letter-spacing:0.18em;color:rgba(244,240,232,0.6)}
+.founder-ill svg{width:100%;max-width:300px;height:auto;overflow:visible}
+@media(max-width:768px){
+  .founder-sec{padding:80px 0}
+  .founder-grid{grid-template-columns:1fr}
+  .founder-ill{display:none}
+}
+
+/* ===== FINAL CTA ===== */
+.final-cta-sec{background:var(--mint-primary);padding:120px 0;position:relative;overflow:hidden}
+.final-cta-inner{text-align:center;position:relative;z-index:1}
+.final-cta-inner .f-eye{color:rgba(244,240,232,0.55);margin-bottom:16px}
+.final-cta-inner .f-h2{font-family:var(--font-primary);font-weight:700;font-size:clamp(40px,5vw,72px);color:var(--cream);margin-bottom:20px;letter-spacing:-0.025em}
+.final-cta-inner .f-body{color:rgba(244,240,232,0.8);margin:0 auto 40px;max-width:520px}
+.final-cta-ctas{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.final-cta-trust{font-family:var(--font-primary);font-weight:600;font-size:11px;color:rgba(244,240,232,0.6);letter-spacing:0.18em;text-transform:uppercase}
+.botanical-bg{position:absolute;right:-60px;bottom:0;opacity:0.1;z-index:0;width:35%;max-width:400px}
+
+/* ===== BLOG ===== */
+.blog-sec{background:var(--cream);padding:120px 0}
+.blog-header{text-align:center;margin-bottom:48px}
+.blog-header .f-h2{color:var(--ink);margin-top:16px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.blog-card{background:var(--cream-dark);border:2px solid var(--ink);border-radius:4px;box-shadow:2px 3px 0 var(--ink);overflow:hidden;transition:transform 0.3s ease-in-out,box-shadow 0.3s ease-in-out}
+.blog-card:hover{transform:translateY(-6px);box-shadow:3px 6px 0 var(--ink)}
+.blog-card-ill{height:160px;background:var(--mint-light);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.blog-card-body{padding:24px}
+.blog-tag{font-family:var(--font-primary);font-weight:600;font-size:11px;color:var(--mint-primary);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:8px}
+.blog-card .f-h3{color:var(--ink);font-size:18px;margin-bottom:12px;line-height:1.35}
+.blog-meta{font-family:var(--font-primary);font-weight:600;font-size:11px;color:var(--warm-gray);letter-spacing:0.18em}
+@media(max-width:768px){
+  .blog-sec{padding:80px 0}
+  .blog-grid{grid-template-columns:1fr}
+}
+
+/* ===== NEWSLETTER ===== */
+.news-sec{background:var(--ink);padding:120px 0}
+.news-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.news-form{display:flex;gap:12px;margin-top:24px}
+.news-input{flex:1;background:var(--ink-light);border:1.5px solid rgba(244,240,232,0.2);border-radius:3px;padding:14px 20px;color:var(--cream);font-family:var(--font-secondary);font-weight:400;font-size:16px}
+.news-input::placeholder{color:var(--warm-gray)}
+.news-btn{background:var(--mint-primary);color:var(--cream);border:2px solid var(--ink);box-shadow:2px 3px 0 var(--ink);border-radius:3px;padding:14px 24px;font-family:var(--font-primary);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:0.08em;white-space:nowrap}
+.news-btn:hover{animation:wobble 0.4s cubic-bezier(0.36,0.07,0.19,0.97) both}
+.news-ill{width:140px}
+@media(max-width:768px){
+  .news-sec{padding:80px 0}
+  .news-grid{grid-template-columns:1fr}
+  .news-form{flex-direction:column}
+  .news-ill{display:none}
+}
+
+/* ===== FOUNDER MSG ===== */
+.msg-sec{background:var(--cream);padding:120px 0}
+.msg-grid{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:start}
+.msg-sec .f-h3{color:var(--ink);margin-bottom:24px}
+.msg-attr{font-family:var(--font-primary);font-weight:600;font-size:20px;color:var(--ink);margin-top:32px;letter-spacing:-0.01em}
+.msg-flourish{width:200px}
+@media(max-width:768px){
+  .msg-sec{padding:80px 0}
+  .msg-grid{grid-template-columns:1fr}
+  .msg-flourish{display:none}
+}
+
+/* ===== FAQ ===== */
+.faq-sec{background:var(--mint-light);padding:120px 0}
+.faq-header{text-align:center;margin-bottom:48px}
+.faq-header .f-h2{color:var(--ink);margin-top:16px}
+.faq-list{max-width:800px;margin:0 auto}
+.faq-item{background:var(--cream);border:2px solid var(--ink);border-radius:4px;margin-bottom:12px;overflow:hidden}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:20px 24px;cursor:pointer;width:100%;text-align:left;font-family:var(--font-primary);font-weight:600;font-size:18px;color:var(--ink);letter-spacing:-0.01em}
+.faq-q:hover{background:rgba(62,180,137,0.05)}
+.faq-q svg{flex-shrink:0;transition:transform 0.3s ease-in-out}
+.faq-item.open .faq-q svg{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease-in-out}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:0 24px 20px;font-family:var(--font-secondary);font-weight:400;font-size:16px;color:var(--ink-light);line-height:1.72}
+@media(max-width:768px){.faq-sec{padding:80px 0}}
+
+/* ===== GUARANTEE ===== */
+.guarantee-sec{background:var(--ink);padding:120px 0;text-align:center;position:relative;overflow:hidden}
+.guarantee-sec .f-h2{font-family:var(--font-primary);font-weight:700;font-size:clamp(36px,4vw,60px);color:var(--cream);margin-bottom:20px;position:relative;z-index:1;letter-spacing:-0.025em}
+.guarantee-sec .f-body{color:var(--warm-gray);margin:0 auto 40px;max-width:620px;position:relative;z-index:1}
+.guarantee-shield{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);opacity:0.06;z-index:0}
+
+/* ===== FOOTER ===== */
+.footer{background:var(--ink);padding:80px 0 0}
+.footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:40px;padding-bottom:48px}
+.footer-brand .nav-logo{color:var(--cream);font-size:20px}
+.footer-tagline{font-family:var(--font-secondary);color:var(--warm-gray);font-size:14px;line-height:1.6;margin-top:12px;margin-bottom:12px;max-width:300px}
+.footer-contact{font-family:var(--font-secondary);font-size:14px;color:var(--mint-accent);margin-bottom:4px}
+.footer-social{display:flex;gap:16px;margin-top:12px}
+.footer-social a{color:var(--warm-gray);transition:color 0.2s ease-in-out}
+.footer-social a:hover{color:var(--mint-accent)}
+.footer-col-label{font-family:var(--font-primary);font-weight:600;font-size:11px;color:var(--warm-gray);letter-spacing:0.18em;text-transform:uppercase;margin-bottom:20px}
+.footer-col a{display:block;font-family:var(--font-secondary);font-weight:400;font-size:15px;color:var(--warm-gray);margin-bottom:10px;line-height:1.6;transition:color 0.2s ease-in-out}
+.footer-col a:hover{color:var(--mint-accent)}
+.footer-bottom{border-top:1px solid rgba(244,240,232,0.07);padding:20px 0;display:flex;justify-content:space-between;align-items:center}
+.footer-bottom span,.footer-bottom a{font-family:var(--font-secondary);font-weight:400;font-size:13px;color:var(--warm-gray)}
+.footer-bottom a{margin-left:16px;transition:color 0.2s ease-in-out}
+.footer-bottom a:hover{color:var(--mint-accent)}
+@media(max-width:768px){
+  .footer-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .footer-bottom{flex-direction:column;gap:8px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- CUSTOM CURSOR -->
+
+<!-- ===== NAV ===== -->
+<nav class="nav" id="nav">
+<div class="nav-inner">
+  <a href="#" class="nav-logo">b2bmint<svg class="nav-leaf" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" style="animation:sway 3s ease-in-out infinite"><path d="M8,14 C8,14 4,10 4,6 C4,3 6,1 8,1 C10,1 12,3 12,6 C12,10 8,14 8,14Z" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8,4 L8,12" stroke="var(--ink)" stroke-width="1" stroke-linecap="round"/><path d="M8,6 L6,5" stroke="var(--ink)" stroke-width="0.8" stroke-linecap="round"/><path d="M8,8 L10,7" stroke="var(--ink)" stroke-width="0.8" stroke-linecap="round"/></svg></a>
+  <div class="nav-links" id="nav-links">
+    <a href="#services">SaaS SEO</a>
+    <a href="#case">Case Studies</a>
+    <a href="#about">About Us</a>
+    <a href="#blog">Blog</a>
+    <a href="#newsletter">Newsletter</a>
+  </div>
+  <a href="https://calendly.com/hamid-b2bmint/30min" class="nav-cta" target="_blank" rel="noopener">Book a Free Strategy Call</a>
+  <button class="nav-mob" id="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+</div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero hero-loaded" id="hero">
+<div class="container">
+  <div class="hero-top">
+    <p class="hero-eye">SAAS SEO AGENCY</p>
+    <h1 class="f-hero">
+      <span class="line">SaaS SEO That Builds</span>
+      <span class="line"><span class="underline-word">Pipeline<svg class="ul-svg" viewBox="0 0 180 14" preserveAspectRatio="none" aria-hidden="true"><path class="draw-path" style="--len:320;--d:600ms" d="M2,10 C36,3 80,13 120,7 C155,2 165,12 178,8" stroke="var(--mint-accent)" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></span> In Google,</span>
+      <span class="line">ChatGPT, & Every</span>
+      <span class="line">Search That Matters.</span>
+    </h1>
+    <p class="hero-intro">"You're not losing to better products. You're losing to brands AI already trusts."</p>
+    <p class="hero-sub">Semantic architecture, topical authority, AI visibility, and content — engineered into one pipeline-driving system. We make your brand the source AI and Google cite, not just index.</p>
+    <div class="hero-ctas">
+      <a href="https://calendly.com/hamid-b2bmint/30min" class="hero-btn-primary" target="_blank" rel="noopener">Get a Free Consultation →</a>
+      <a href="#" class="hero-btn-secondary">Grab the 90-Day SEO Playbook</a>
+    </div>
+  </div>
+  <!-- ASTPE Animation: The Authority Search-to-Pipeline Engine -->
+  <div class="astpe">
+    <!-- Column 1: Search Inputs -->
+    <div class="astpe-col">
+      <p class="astpe-col-label">SEARCH INPUTS</p>
+      <div class="astpe-pill"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="animation:pulse 3s ease-in-out infinite;flex-shrink:0"><circle cx="12" cy="12" r="9" stroke="rgba(244,240,232,0.6)" stroke-width="2" fill="none"/><path d="M7,12 A5,5 0 0,1 12,7" stroke="var(--blush)" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M12,7 A5,5 0 0,1 17,12" stroke="var(--butter)" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M17,12 A5,5 0 0,1 12,17" stroke="var(--sky)" stroke-width="2.5" stroke-linecap="round" fill="none"/><path d="M12,17 A5,5 0 0,1 7,12" stroke="var(--mint-accent)" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg><span class="astpe-pill-label">Google</span></div>
+      <div class="astpe-pill"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="animation:spin-slow 8s linear infinite;flex-shrink:0"><circle cx="12" cy="12" r="3" fill="var(--mint-accent)"/><line x1="12" y1="3" x2="12" y2="7" stroke="var(--mint-accent)" stroke-width="2" stroke-linecap="round"/><line x1="12" y1="17" x2="12" y2="21" stroke="var(--mint-accent)" stroke-width="2" stroke-linecap="round"/><line x1="3" y1="12" x2="7" y2="12" stroke="var(--mint-accent)" stroke-width="2" stroke-linecap="round"/><line x1="17" y1="12" x2="21" y2="12" stroke="var(--mint-accent)" stroke-width="2" stroke-linecap="round"/><line x1="5.6" y1="5.6" x2="8.5" y2="8.5" stroke="var(--mint-accent)" stroke-width="2" stroke-linecap="round"/><line x1="15.5" y1="15.5" x2="18.4" y2="18.4" stroke="var(--mint-accent)" stroke-width="2" stroke-linecap="round"/></svg><span class="astpe-pill-label">ChatGPT</span></div>
+      <div class="astpe-pill"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0.5s;flex-shrink:0"><line x1="12" y1="2" x2="12" y2="22" stroke="var(--sky)" stroke-width="2" stroke-linecap="round"/><line x1="2" y1="12" x2="22" y2="12" stroke="var(--sky)" stroke-width="2" stroke-linecap="round"/><line x1="5" y1="5" x2="19" y2="19" stroke="var(--sky)" stroke-width="2" stroke-linecap="round"/><line x1="19" y1="5" x2="5" y2="19" stroke="var(--sky)" stroke-width="2" stroke-linecap="round"/></svg><span class="astpe-pill-label">Perplexity</span></div>
+      <div class="astpe-pill"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="animation:float-a 3s ease-in-out infinite;animation-delay:1s;flex-shrink:0"><circle cx="12" cy="12" r="9" stroke="var(--butter)" stroke-width="2" fill="none"/><circle cx="9" cy="10" r="1.2" fill="var(--butter)"/><circle cx="15" cy="10" r="1.2" fill="var(--butter)"/><path d="M9,15 Q12,17 15,15" stroke="var(--butter)" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg><span class="astpe-pill-label">Claude</span></div>
+      <div class="astpe-pill"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" style="animation:sway 3.5s ease-in-out infinite;animation-delay:0.8s;flex-shrink:0"><path d="M12,2 L14,10 L12,8 L10,10 Z" stroke="var(--blush)" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M12,22 L14,14 L12,16 L10,14 Z" stroke="var(--blush)" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M2,12 L10,10 L8,12 L10,14 Z" stroke="var(--blush)" stroke-width="2" fill="none" stroke-linejoin="round"/><path d="M22,12 L14,10 L16,12 L14,14 Z" stroke="var(--blush)" stroke-width="2" fill="none" stroke-linejoin="round"/></svg><span class="astpe-pill-label">Gemini</span></div>
+    </div>
+    <!-- Connector: Left → Center -->
+    <div class="astpe-connector">
+      <span class="astpe-connector-label">QUERIES</span>
+      <svg width="80" height="40" viewBox="0 0 80 40" fill="none" style="animation:breathe 2s ease-in-out infinite"><path d="M4,20 C20,20 60,20 72,20" stroke="var(--mint-accent)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/><path d="M68,14 L76,20 L68,26" stroke="var(--mint-accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/></svg>
+      <div class="astpe-particles"><span class="astpe-particle"></span><span class="astpe-particle"></span><span class="astpe-particle"></span><span class="astpe-particle"></span></div>
+    </div>
+    <!-- Column 2: ASTPE Engine -->
+    <div class="astpe-engine">
+      <p class="astpe-engine-brand">YOUR BRAND</p>
+      <p class="astpe-engine-title">ASTPE Engine</p>
+      <svg class="astpe-engine-svg" viewBox="0 0 240 200" fill="none" aria-hidden="true">
+        <!-- Pulse rings -->
+        <circle cx="120" cy="100" r="48" fill="none" stroke="var(--mint-accent)" stroke-width="1.5" opacity="0.5"><animate attributeName="r" from="48" to="72" dur="2s" repeatCount="indefinite"/><animate attributeName="opacity" from="0.5" to="0" dur="2s" repeatCount="indefinite"/></circle>
+        <circle cx="120" cy="100" r="48" fill="none" stroke="var(--mint-accent)" stroke-width="1.5" opacity="0.5"><animate attributeName="r" from="48" to="72" dur="2s" begin="1s" repeatCount="indefinite"/><animate attributeName="opacity" from="0.5" to="0" dur="2s" begin="1s" repeatCount="indefinite"/></circle>
+        <!-- Gear (outer ring with teeth) -->
+        <g style="animation:gear-spin 6s linear infinite;transform-origin:120px 100px">
+          <path d="M120,64 L124,68 L128,64 L128,72 L136,72 L132,76 L136,80 L128,80 L128,88 L124,84 L120,88 L116,84 L112,88 L112,80 L104,80 L108,76 L104,72 L112,72 L112,64 L116,68 Z" stroke="var(--mint-accent)" stroke-width="2" fill="none" transform="scale(1.8) translate(-53.5,-44.5)"/>
+        </g>
+        <!-- Inner hub -->
+        <circle cx="120" cy="100" r="16" fill="var(--mint-primary)"/>
+        <text x="120" y="105" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="14" fill="var(--text-on-dark)">B</text>
+        <!-- Orbiting nodes -->
+        <g style="animation:orbit 12s linear infinite;--start-angle:0deg;transform-origin:120px 100px">
+          <circle cx="190" cy="100" r="14" fill="rgba(14,48,34,0.9)" stroke="var(--mint-accent)" stroke-width="2"/>
+          <circle cx="190" cy="100" r="4" fill="var(--mint-primary)"/>
+        </g>
+        <g style="animation:orbit 12s linear infinite;--start-angle:90deg;transform-origin:120px 100px">
+          <circle cx="190" cy="100" r="14" fill="rgba(14,48,34,0.9)" stroke="var(--mint-accent)" stroke-width="2"/>
+          <circle cx="186" cy="96" r="2" fill="var(--ink)"/><circle cx="194" cy="96" r="2" fill="var(--ink)"/><circle cx="190" cy="104" r="2" fill="var(--ink)"/>
+        </g>
+        <g style="animation:orbit 12s linear infinite;--start-angle:180deg;transform-origin:120px 100px">
+          <circle cx="190" cy="100" r="14" fill="rgba(14,48,34,0.9)" stroke="var(--mint-accent)" stroke-width="2"/>
+          <path d="M185,97 Q190,103 195,97" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M183,100 Q185,94 190,97" stroke="var(--mint-primary)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M197,100 Q195,94 190,97" stroke="var(--mint-primary)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </g>
+        <g style="animation:orbit 12s linear infinite;--start-angle:270deg;transform-origin:120px 100px">
+          <circle cx="190" cy="100" r="14" fill="rgba(14,48,34,0.9)" stroke="var(--mint-accent)" stroke-width="2"/>
+          <path d="M185,105 L190,92 L195,105 Z" stroke="var(--mint-primary)" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+        </g>
+        <!-- Dashed orbit ring -->
+        <circle cx="120" cy="100" r="70" fill="none" stroke="var(--mint-accent)" stroke-width="1" stroke-dasharray="3 3" opacity="0.3" style="animation:march 1.2s linear infinite"/>
+      </svg>
+      <div class="astpe-engine-labels">
+        <span class="astpe-engine-label">Semantic Foundation</span>
+        <span class="astpe-engine-label">Topical Authority</span>
+        <span class="astpe-engine-label">AI Visibility</span>
+        <span class="astpe-engine-label">Pipeline Content</span>
+      </div>
+    </div>
+    <!-- Connector: Center → Right -->
+    <div class="astpe-connector">
+      <span class="astpe-connector-label">PIPELINE</span>
+      <svg width="80" height="40" viewBox="0 0 80 40" fill="none" style="animation:breathe 2s ease-in-out infinite;animation-delay:0.5s"><path d="M4,20 C20,20 60,20 72,20" stroke="var(--mint-accent)" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.8"/><path d="M68,14 L76,20 L68,26" stroke="var(--mint-accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/></svg>
+      <div class="astpe-particles"><span class="astpe-particle"></span><span class="astpe-particle"></span><span class="astpe-particle"></span><span class="astpe-particle"></span></div>
+    </div>
+    <!-- Column 3: Pipeline Output -->
+    <div class="astpe-col">
+      <p class="astpe-col-label">PIPELINE OUTPUT</p>
+      <div class="astpe-chip"><div class="astpe-chip-left"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="animation:pulse 2.5s ease-in-out infinite;flex-shrink:0"><rect x="3" y="3" width="14" height="14" rx="2" stroke="var(--mint-accent)" stroke-width="2" fill="none"/><line x1="3" y1="7" x2="17" y2="7" stroke="var(--mint-accent)" stroke-width="1.5"/><path d="M7,12 L9,14 L13,10" stroke="var(--mint-accent)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="astpe-chip-label">Demos</span></div><span class="astpe-chip-arrow">↑</span></div>
+      <div class="astpe-chip"><div class="astpe-chip-left"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0.4s;flex-shrink:0"><ellipse cx="10" cy="5" rx="6" ry="3" stroke="var(--sky)" stroke-width="2" fill="none"/><ellipse cx="10" cy="10" rx="6" ry="3" stroke="var(--sky)" stroke-width="2" fill="none"/><ellipse cx="10" cy="15" rx="6" ry="3" stroke="var(--sky)" stroke-width="2" fill="none"/></svg><span class="astpe-chip-label">SQLs</span></div><span class="astpe-chip-arrow">↑</span></div>
+      <div class="astpe-chip"><div class="astpe-chip-left"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="animation:sway 3s ease-in-out infinite;animation-delay:0.8s;flex-shrink:0"><circle cx="8" cy="8" r="5" stroke="var(--butter)" stroke-width="2" fill="none"/><line x1="13" y1="8" x2="17" y2="8" stroke="var(--butter)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="12" x2="17" y2="8" stroke="var(--butter)" stroke-width="2" stroke-linecap="round"/><line x1="15" y1="16" x2="15" y2="12" stroke="var(--butter)" stroke-width="2" stroke-linecap="round"/></svg><span class="astpe-chip-label">Free Trials</span></div><span class="astpe-chip-arrow">↑</span></div>
+      <div class="astpe-chip"><div class="astpe-chip-left"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" style="animation:pulse 2s ease-in-out infinite;animation-delay:1.2s;flex-shrink:0"><circle cx="10" cy="10" r="7" stroke="var(--gold)" stroke-width="2" fill="rgba(201,151,58,0.15)"/><text x="10" y="14" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="10" fill="var(--gold)">$</text></svg><span class="astpe-chip-label">Revenue</span></div><span class="astpe-chip-arrow">↑</span></div>
+      <div class="astpe-meter">
+        <p class="astpe-meter-text">$72M+ Pipeline Generated</p>
+        <div class="astpe-meter-track"><div class="astpe-meter-fill"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Stats Strip -->
+<div class="stats-strip">
+  <div class="container">
+    <div class="stats-strip-inner">
+      <div class="stat-strip-item">
+        <div class="stat-strip-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite">
+            <path d="M8,6 L24,6 L20,20 L12,20 Z" stroke="var(--mint-accent)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <line x1="14" y1="20" x2="14" y2="26" stroke="var(--mint-accent)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="18" y1="20" x2="18" y2="26" stroke="var(--mint-accent)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="10" y1="26" x2="22" y2="26" stroke="var(--mint-accent)" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <p class="stat-strip-text">$6M Pipeline Generated for Email Data SaaS</p>
+      </div>
+      <div class="stat-strip-item">
+        <div class="stat-strip-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" style="animation:float-b 3s ease-in-out infinite">
+            <path d="M6,26 L6,18 C6,14 10,8 16,6 C22,8 26,14 26,18 L26,26" stroke="var(--mint-accent)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16,18 L16,10" stroke="var(--mint-accent)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12,14 L16,8 L20,14" stroke="var(--mint-accent)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <p class="stat-strip-text">600% Lead Growth for Email Marketing SaaS in 8 Months</p>
+      </div>
+      <div class="stat-strip-item">
+        <div class="stat-strip-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true" style="animation:sway 4s ease-in-out infinite">
+            <circle cx="16" cy="16" r="10" fill="var(--butter)" stroke="var(--ink)" stroke-width="2"/>
+            <text x="16" y="20" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="12" fill="var(--ink)">$</text>
+          </svg>
+        </div>
+        <p class="stat-strip-text">$50M in SEO Pipeline for Influencer Marketing Platform</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonial Pull Quote -->
+<div class="testi-pull">
+  <p class="testi-pull-quote">"Had traffic. No pipeline. B2BMint rebuilt our entire semantic architecture — site structure, entity signals, content hierarchy. Added bottom-funnel pages for high-intent buyers. 8 months later: cited in ChatGPT, $4.2M pipeline, 41% lower CAC. Organic is now our #1 revenue channel."</p>
+  <p class="testi-pull-attr">ADAM FISCHER · HEAD OF GROWTH</p>
+</div>
+</section>
+
+<!-- Wave: mint-primary → cream -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--cream)"/></svg></div>
+
+<!-- ===== PAIN POINTS ===== -->
+<section class="pain-sec">
+<div class="container">
+  <div class="section-header pain-header reveal" style="--i:0">
+    <p class="f-eye">OUTDATED SEO</p>
+    <h2 class="f-h2">Your Current SEO Strategy Has an <span class="underline-word">Expiration Date<svg class="ul-svg" viewBox="0 0 180 14" preserveAspectRatio="none" aria-hidden="true"><path class="draw-path" style="--len:320;--d:400ms" d="M2,10 C36,3 80,13 120,7 C155,2 165,12 178,8" stroke="var(--mint-accent)" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></span></h2>
+  </div>
+  <div class="pain-grid">
+    <!-- Card 1 -->
+    <div class="pain-card reveal" style="--i:1">
+      <div class="icon-w">
+        <svg viewBox="0 0 72 72" fill="none" aria-hidden="true" style="animation:pulse 3s ease-in-out infinite;animation-delay:0s">
+          <rect x="12" y="18" width="36" height="36" rx="2" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="18" y="44" width="6" height="8" rx="1" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5"/>
+          <rect x="27" y="38" width="6" height="14" rx="1" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5"/>
+          <rect x="36" y="32" width="6" height="20" rx="1" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="18" y1="42" x2="42" y2="42" stroke="var(--blush)" stroke-width="2" stroke-linecap="round"/>
+          <!-- CFO face -->
+          <g transform="translate(52,20)">
+            <circle cx="8" cy="8" r="8" fill="var(--butter)" stroke="var(--ink)" stroke-width="1.5"/>
+            <circle cx="5" cy="6" r="1" fill="var(--ink)"/><circle cx="11" cy="6" r="1" fill="var(--ink)"/>
+            <path d="M5,11 C5,11 8,9 11,11" stroke="var(--ink)" stroke-width="1" fill="none" stroke-linecap="round"/>
+            <text x="8" y="-2" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="10" fill="var(--blush)">?</text>
+          </g>
+        </svg>
+      </div>
+      <p class="f-eye">TRAFFIC WITHOUT REVENUE</p>
+      <h3 class="f-h3">You rank. You don't convert.</h3>
+      <p class="f-body">Traffic goes up. Pipeline stays flat. Your SEO agency celebrates metrics your CFO can't spend.</p>
+    </div>
+    <!-- Card 2 -->
+    <div class="pain-card reveal" style="--i:2">
+      <div class="icon-w">
+        <svg viewBox="0 0 72 72" fill="none" aria-hidden="true" style="animation:float-a 2.8s ease-in-out infinite;animation-delay:0.4s">
+          <rect x="12" y="16" width="40" height="30" rx="10" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12,46 L20,40" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+          <text x="32" y="36" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="16" fill="var(--ink)">AI?</text>
+          <!-- 3 small circles -->
+          <circle cx="56" cy="16" r="5" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.5"/>
+          <circle cx="62" cy="28" r="5" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.5"/>
+          <circle cx="58" cy="42" r="5" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="52" y1="24" x2="56" y2="18" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/>
+          <line x1="52" y1="32" x2="58" y2="30" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/>
+          <line x1="50" y1="40" x2="54" y2="42" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <p class="f-eye">AI INVISIBILITY</p>
+      <h3 class="f-h3">AI is eating your clicks.</h3>
+      <p class="f-body">ChatGPT, Perplexity, Gemini — they're answering buyer questions without sending anyone to your site. If you're not the cited source, you're invisible.</p>
+    </div>
+    <!-- Card 3 -->
+    <div class="pain-card reveal" style="--i:3">
+      <div class="icon-w">
+        <svg viewBox="0 0 72 72" fill="none" aria-hidden="true" style="animation:float-a 3.5s ease-in-out infinite;animation-delay:0.8s">
+          <!-- Tombstones -->
+          <rect x="8" y="32" width="14" height="22" rx="4" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="15" y="46" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5" fill="var(--ink)">POST</text>
+          <rect x="26" y="26" width="14" height="28" rx="4" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="2"/>
+          <text x="33" y="43" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5" fill="var(--ink)">BLOG</text>
+          <rect x="44" y="30" width="14" height="24" rx="4" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="2"/>
+          <text x="51" y="45" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5" fill="var(--ink)">PAGE</text>
+          <line x1="4" y1="54" x2="64" y2="54" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+          <!-- Wilted flower -->
+          <g style="animation:sway 2.5s ease-in-out infinite;transform-origin:42px 26px">
+            <path d="M42,26 C42,22 44,18 42,16" stroke="var(--ink)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <circle cx="40" cy="14" r="3" fill="var(--blush)" stroke="var(--ink)" stroke-width="1"/>
+            <circle cx="44" cy="13" r="2.5" fill="var(--blush)" stroke="var(--ink)" stroke-width="1"/>
+          </g>
+        </svg>
+      </div>
+      <p class="f-eye">CONTENT GRAVEYARD</p>
+      <h3 class="f-h3">You built content. Not authority.</h3>
+      <p class="f-body">You published 100 blog posts. None of them connect. Google sees fragments. LLMs see noise. Your "content strategy" is a keyword graveyard.</p>
+    </div>
+    <!-- Card 4 -->
+    <div class="pain-card reveal" style="--i:4">
+      <div class="icon-w">
+        <svg viewBox="0 0 72 72" fill="none" aria-hidden="true" style="animation:sway 4s ease-in-out infinite;animation-delay:1.2s">
+          <path d="M20,10 L52,10 L52,38 C52,44 48,50 36,56 C24,50 20,44 20,38 Z" fill="var(--butter)" stroke="var(--ink)" stroke-width="2" stroke-dasharray="4 3" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="36" y="38" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="18" fill="var(--ink)">2019</text>
+          <g transform="translate(46,8) rotate(15)">
+            <line x1="0" y1="0" x2="10" y2="10" stroke="var(--blush)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="10" y1="0" x2="0" y2="10" stroke="var(--blush)" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+      </div>
+      <p class="f-eye">LEGACY TACTICS</p>
+      <h3 class="f-h3">Your last agency sold you 2019 SEO.</h3>
+      <p class="f-body">They talked about backlinks and "domain authority." They didn't mention semantic entities, topical clusters, or how LLMs decide who to trust.</p>
+    </div>
+  </div>
+  <p class="pain-callout reveal" style="--i:5">"This isn't about working harder on SEO. It's about working on a different system entirely."</p>
+</div>
+</section>
+
+<!-- Wave: cream → mint-light -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--mint-light)"/></svg></div>
+
+<!-- ===== SOLUTION ===== -->
+<section class="solution-sec">
+<div class="container">
+  <div class="section-header solution-header reveal" style="--i:0">
+    <p class="f-eye">THE SOLUTION</p>
+    <h2 class="f-h2">The System That Turns Search Into Pipeline</h2>
+    <p class="f-body" style="margin:0 auto">Most SEO strategies generate reports. This one generates revenue. The Authority Search-to-Pipeline Engine is a semantic SEO system built for one outcome: make your SaaS the answer buyers find — in Google, in AI, and at every touchpoint before they book a demo.</p>
+  </div>
+
+  <!-- Row 1: Semantic Foundation -->
+  <div class="feature-row reveal" style="--i:1">
+    <div>
+      <p class="f-eye">SEMANTIC ARCHITECTURE</p>
+      <h3 class="f-h3">Semantic Foundation</h3>
+      <p class="f-body">We map your entire product to the topics, entities, and buyer questions that matter. Every page connects. Every cluster reinforces. Google stops seeing fragments — it sees a category leader.</p>
+    </div>
+    <div class="feature-ill">
+      <svg viewBox="0 0 320 260" fill="none" aria-hidden="true">
+        <!-- Central node -->
+        <circle cx="160" cy="130" r="28" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="2" style="animation:pulse 3.5s ease-in-out infinite"/>
+        <text x="160" y="126" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5" fill="var(--cream)" letter-spacing="0.1em">YOUR</text>
+        <text x="160" y="134" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5" fill="var(--cream)" letter-spacing="0.1em">BRAND</text>
+        <!-- Satellites -->
+        <g><circle cx="80" cy="60" r="16" fill="var(--sky)" stroke="var(--ink)" stroke-width="2"/><circle cx="45" cy="45" r="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="1"/><circle cx="60" cy="80" r="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="1"/><line x1="80" y1="76" x2="135" y2="112" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/><line x1="80" y1="60" x2="51" y2="47" class="dashed-march" stroke="var(--ink)" stroke-width="1" fill="none"/><line x1="74" y1="72" x2="64" y2="78" class="dashed-march" stroke="var(--ink)" stroke-width="1" fill="none"/></g>
+        <g><circle cx="250" cy="60" r="16" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="2"/><circle cx="285" cy="50" r="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="1"/><circle cx="270" cy="80" r="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="1"/><line x1="236" y1="70" x2="185" y2="115" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/><line x1="262" y1="54" x2="280" y2="50" class="dashed-march" stroke="var(--ink)" stroke-width="1" fill="none"/><line x1="256" y1="72" x2="266" y2="78" class="dashed-march" stroke="var(--ink)" stroke-width="1" fill="none"/></g>
+        <g><circle cx="60" cy="170" r="16" fill="var(--butter)" stroke="var(--ink)" stroke-width="2"/><circle cx="30" cy="185" r="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="1"/><line x1="75" y1="162" x2="135" y2="140" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/><line x1="48" y1="178" x2="34" y2="183" class="dashed-march" stroke="var(--ink)" stroke-width="1" fill="none"/></g>
+        <g><circle cx="260" cy="180" r="16" fill="var(--cream)" stroke="var(--ink)" stroke-width="2"/><circle cx="290" cy="195" r="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="1"/><line x1="246" y1="172" x2="186" y2="142" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/><line x1="272" y1="190" x2="286" y2="193" class="dashed-march" stroke="var(--ink)" stroke-width="1" fill="none"/></g>
+        <g><circle cx="110" cy="230" r="16" fill="var(--blush)" stroke="var(--ink)" stroke-width="2"/><line x1="122" y1="220" x2="148" y2="155" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/></g>
+        <g><circle cx="220" cy="235" r="16" fill="var(--mint-accent)" opacity="0.7" stroke="var(--ink)" stroke-width="2"/><circle cx="250" cy="248" r="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="1"/><line x1="208" y1="224" x2="175" y2="155" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/><line x1="232" y1="244" x2="246" y2="246" class="dashed-march" stroke="var(--ink)" stroke-width="1" fill="none"/></g>
+        <!-- Stars -->
+        <g style="animation:float-a 2.2s ease-in-out infinite;animation-delay:0.3s" opacity="0.3"><path d="M15,20 L17,13 L19,20 L12,16 L22,16 Z" fill="var(--gold)" stroke="var(--ink)" stroke-width="0.8"/></g>
+        <g style="animation:float-a 2.2s ease-in-out infinite;animation-delay:1.1s" opacity="0.25"><path d="M300,240 L302,233 L304,240 L297,236 L307,236 Z" fill="var(--gold)" stroke="var(--ink)" stroke-width="0.8"/></g>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Row 2: Pipeline-First Content -->
+  <div class="feature-row reverse reveal" style="--i:2">
+    <div>
+      <p class="f-eye">PIPELINE-FIRST CONTENT</p>
+      <h3 class="f-h3">Pipeline-First Content</h3>
+      <p class="f-body">We build content for buyers, not browsers. Comparison pages. Alternative pages. Problem-solution pages that capture intent 7 days before purchase. Traffic that actually shows up in your CRM.</p>
+    </div>
+    <div class="feature-ill">
+      <svg viewBox="0 0 300 240" fill="none" aria-hidden="true">
+        <!-- Window 1: Search -->
+        <g style="animation:float-a 4s ease-in-out infinite;animation-delay:0s">
+          <rect x="10" y="20" width="130" height="80" rx="6" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="10" y="20" width="130" height="18" rx="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="22" cy="29" r="2.5" fill="var(--blush)"/><circle cx="30" cy="29" r="2.5" fill="var(--butter)"/><circle cx="38" cy="29" r="2.5" fill="var(--mint-light)"/>
+          <rect x="22" y="50" width="108" height="12" rx="3" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.5"/>
+          <line x1="28" y1="56" x2="100" y2="56" stroke="var(--warm-gray)" stroke-width="1" opacity="0.5" stroke-linecap="round"/>
+          <line x1="22" y1="72" x2="120" y2="72" stroke="var(--warm-gray)" stroke-width="1" opacity="0.3" stroke-linecap="round"/>
+          <line x1="22" y1="82" x2="110" y2="82" stroke="var(--warm-gray)" stroke-width="1" opacity="0.25" stroke-linecap="round"/>
+        </g>
+        <!-- Window 2: Comparison Table -->
+        <g style="animation:float-a 4s ease-in-out infinite;animation-delay:0.7s">
+          <rect x="80" y="80" width="130" height="80" rx="6" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="2"/>
+          <rect x="80" y="80" width="130" height="18" rx="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="92" cy="89" r="2.5" fill="var(--blush)"/><circle cx="100" cy="89" r="2.5" fill="var(--butter)"/><circle cx="108" cy="89" r="2.5" fill="var(--mint-light)"/>
+          <!-- Table lines -->
+          <line x1="120" y1="105" x2="120" y2="150" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+          <line x1="160" y1="105" x2="160" y2="150" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+          <line x1="90" y1="118" x2="200" y2="118" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+          <line x1="90" y1="132" x2="200" y2="132" stroke="var(--ink)" stroke-width="1" opacity="0.3"/>
+          <!-- Checkmarks & X -->
+          <path d="M104,112 L107,115 L113,108" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M104,126 L107,129 L113,122" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M104,140 L107,143 L113,136" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M135,110 L141,116" stroke="var(--blush)" stroke-width="2" stroke-linecap="round"/><path d="M141,110 L135,116" stroke="var(--blush)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M135,124 L141,130" stroke="var(--blush)" stroke-width="2" stroke-linecap="round"/><path d="M141,124 L135,130" stroke="var(--blush)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M174,112 L177,115 L183,108" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </g>
+        <!-- Window 3: Demo Booked -->
+        <g style="animation:float-a 4s ease-in-out infinite;animation-delay:1.4s">
+          <rect x="150" y="140" width="130" height="80" rx="6" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="2"/>
+          <rect x="150" y="140" width="130" height="18" rx="6" fill="var(--cream)" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="162" cy="149" r="2.5" fill="var(--blush)"/><circle cx="170" cy="149" r="2.5" fill="var(--butter)"/><circle cx="178" cy="149" r="2.5" fill="var(--mint-light)"/>
+          <circle cx="215" cy="186" r="14" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="2"/>
+          <path d="M208,186 L213,192 L224,180" stroke="var(--mint-primary)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <text x="215" y="210" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="5" fill="var(--ink)" letter-spacing="0.08em">DEMO BOOKED</text>
+        </g>
+        <!-- Dotted path connecting windows -->
+        <path d="M140,70 C160,80 155,90 160,100" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/>
+        <path d="M210,160 C220,150 225,145 228,142" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Row 3: AI Search Positioning -->
+  <div class="feature-row reveal" style="--i:3">
+    <div>
+      <p class="f-eye">AI SEARCH VISIBILITY</p>
+      <h3 class="f-h3">AI Search Positioning</h3>
+      <p class="f-body">We engineer your brand to be cited in ChatGPT, Perplexity, Gemini, and AI Overviews. When buyers ask AI "what's the best [your category] software?" — you're the answer, not your competitor.</p>
+    </div>
+    <div class="feature-ill">
+      <svg viewBox="0 0 300 260" fill="none" aria-hidden="true">
+        <!-- AI answer box 1 -->
+        <g transform="rotate(-3,150,70)" style="animation:float-a 3.5s ease-in-out infinite;animation-delay:0s">
+          <rect x="40" y="30" width="220" height="50" rx="8" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="62" cy="55" r="8" fill="#10A37F" opacity="0.7"/>
+          <line x1="80" y1="48" x2="200" y2="48" stroke="var(--warm-gray)" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+          <rect x="80" y="56" width="60" height="8" rx="2" fill="var(--mint-accent)" opacity="0.3"/>
+          <line x1="148" y1="60" x2="240" y2="60" stroke="var(--warm-gray)" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+        </g>
+        <!-- AI answer box 2 -->
+        <g transform="rotate(1,150,130)" style="animation:float-a 3.5s ease-in-out infinite;animation-delay:0.7s">
+          <rect x="50" y="100" width="220" height="50" rx="8" fill="var(--cream)" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="72" cy="125" r="8" fill="#20B2AA" opacity="0.7"/>
+          <line x1="90" y1="118" x2="210" y2="118" stroke="var(--warm-gray)" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+          <rect x="90" y="126" width="60" height="8" rx="2" fill="var(--mint-accent)" opacity="0.3"/>
+          <line x1="158" y1="130" x2="250" y2="130" stroke="var(--warm-gray)" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+        </g>
+        <!-- AI answer box 3 -->
+        <g transform="rotate(-2,150,190)" style="animation:float-a 3.5s ease-in-out infinite;animation-delay:1.4s">
+          <rect x="40" y="170" width="220" height="50" rx="8" fill="var(--cream)" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="62" cy="195" r="8" fill="#4285F4" opacity="0.7"/>
+          <line x1="80" y1="188" x2="200" y2="188" stroke="var(--warm-gray)" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+          <rect x="80" y="196" width="60" height="8" rx="2" fill="var(--mint-accent)" opacity="0.3"/>
+          <line x1="148" y1="200" x2="240" y2="200" stroke="var(--warm-gray)" stroke-width="1.5" opacity="0.3" stroke-linecap="round"/>
+        </g>
+        <!-- Signal rings -->
+        <path d="M155,110 C175,90 195,90 215,110" stroke="var(--mint-primary)" stroke-width="2" fill="none" opacity="0.7" stroke-linecap="round" style="animation:breathe 1.5s ease-in-out infinite"/>
+        <path d="M148,100 C175,72 205,72 232,100" stroke="var(--mint-primary)" stroke-width="1.5" fill="none" opacity="0.4" stroke-linecap="round" style="animation:breathe 1.5s ease-in-out infinite;animation-delay:0.5s"/>
+        <path d="M140,90 C175,55 215,55 250,90" stroke="var(--mint-primary)" stroke-width="1" fill="none" opacity="0.2" stroke-linecap="round" style="animation:breathe 1.5s ease-in-out infinite;animation-delay:1s"/>
+      </svg>
+    </div>
+  </div>
+
+  <p class="solution-closing reveal" style="--i:4">"This isn't another SEO retainer. It's the infrastructure that makes your SaaS discoverable, trustworthy, and chosen — in every search that matters."</p>
+</div>
+</section>
+
+<!-- Wave: mint-light → ink -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--ink)"/></svg></div>
+
+<!-- ===== CASE STUDY ===== -->
+<section class="case-sec" id="case">
+<div class="container">
+  <div class="section-header case-header reveal" style="--i:0">
+    <p class="f-eye">FEATURED CASE STUDY</p>
+    <h2 class="f-h2">8x lead growth. 35% lower CAC. $50M in revenue.</h2>
+    <p class="f-body" style="color:var(--warm-gray);margin:0 auto">How an influencer marketing platform turned search into their #1 pipeline channel.</p>
+  </div>
+  <div class="case-stats reveal" style="--i:1">
+    <div class="case-stat"><p class="num" data-target="216000" data-prefix="+" data-suffix="">0</p><p class="lbl">Organic Visitors</p></div>
+    <div class="case-stat"><p class="num" data-target="8" data-prefix="" data-suffix="x">0x</p><p class="lbl">Lead Growth</p></div>
+    <div class="case-stat"><p class="num" data-target="180" data-prefix="" data-suffix="%">0%</p><p class="lbl">Organic Traffic</p></div>
+    <div class="case-stat"><p class="num" data-target="50" data-prefix="$" data-suffix="M">$0M</p><p class="lbl">Revenue Generated</p></div>
+    <div class="case-stat"><p class="num" data-target="35" data-prefix="" data-suffix="%">0%</p><p class="lbl">Lower CAC</p></div>
+  </div>
+  <!-- Revenue Chart -->
+  <div class="case-chart reveal" style="--i:2">
+    <svg viewBox="0 0 400 200" fill="none" aria-hidden="true">
+      <line x1="60" y1="170" x2="370" y2="170" stroke="var(--warm-gray)" stroke-width="1" opacity="0.3"/>
+      <!-- Bars -->
+      <g>
+        <rect class="chart-bar" x="90" y="130" width="60" height="40" rx="3" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5"/>
+        <rect class="chart-bar" x="180" y="80" width="60" height="90" rx="3" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5"/>
+        <rect class="chart-bar" x="270" y="30" width="60" height="140" rx="3" fill="var(--mint-accent)" stroke="var(--ink)" stroke-width="1.5"/>
+      </g>
+      <!-- Trend line -->
+      <path class="draw-path" style="--len:350;--d:800ms" d="M120,128 C180,100 240,60 300,28" stroke="var(--mint-accent)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+      <!-- Labels -->
+      <text x="120" y="188" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="10" fill="var(--warm-gray)">2023</text>
+      <text x="210" y="188" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="10" fill="var(--warm-gray)">2024</text>
+      <text x="300" y="188" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="10" fill="var(--warm-gray)">2025</text>
+      <text x="120" y="124" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="9" fill="var(--cream)">$200k</text>
+      <text x="210" y="74" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="9" fill="var(--cream)">$17M</text>
+      <text x="300" y="24" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="9" fill="var(--cream)">$50M</text>
+    </svg>
+  </div>
+  <div class="case-ctas reveal" style="--i:3">
+    <a href="#" class="btn btn-mint f-btn">View this Case Study →</a>
+    <a href="#" class="btn btn-outline-mint f-btn" style="border-color:var(--mint-primary);color:var(--mint-accent)">View All Case Studies →</a>
+  </div>
+</div>
+</section>
+
+<!-- Wave: ink → cream -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--cream)"/></svg></div>
+
+<!-- ===== ABOUT ===== -->
+<section class="about-sec" id="about">
+<div class="container">
+  <div class="section-header">
+    <p class="f-eye reveal" style="--i:0">ABOUT B2BMINT</p>
+    <h2 class="f-h2 reveal" style="--i:1;color:var(--ink);margin-left:auto;margin-right:auto">Who We Are</h2>
+  </div>
+  <div class="about-grid">
+    <div>
+      <p class="f-body reveal" style="--i:2">B2B Mint is a semantic SEO agency built exclusively for SaaS and B2B companies serious about pipeline — not vanity metrics. We don't chase rankings or celebrate traffic reports. We build authority systems that make your brand the answer in Google, ChatGPT, and every search that matters.</p>
+      <p class="f-body reveal" style="--i:3;margin-top:16px">Our team lives at the intersection of technical SEO, semantic architecture, and revenue operations. We've helped SaaS companies turn organic search into their most predictable growth channel — generating qualified pipeline while competitors burn budget on ads. If your CFO can't see the ROI, we haven't done our job.</p>
+      <div class="about-stats reveal" style="--i:4">
+        <div class="about-stat"><p class="num" data-target="72" data-prefix="$" data-suffix="M+">$0M+</p><p class="lbl">Pipeline Generated</p></div>
+        <div class="about-stat"><p class="num" data-target="120" data-prefix="" data-suffix="%">0%</p><p class="lbl">Avg. Organic Traffic Growth</p></div>
+        <div class="about-stat"><p class="num" data-target="90" data-prefix="" data-suffix=" Days">0 Days</p><p class="lbl">To First Pipeline Impact</p></div>
+        <div class="about-stat"><p class="num" data-target="150" data-prefix="" data-suffix="+">0+</p><p class="lbl">SaaS Clients Served</p></div>
+      </div>
+    </div>
+    <div class="about-ill reveal" style="--i:5">
+      <svg viewBox="0 0 340 320" fill="none" aria-hidden="true">
+        <!-- Bottom platform (widest) -->
+        <path d="M40,240 L170,170 L300,240 L170,310 Z" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M40,240 L170,310 L170,325 L40,255 Z" fill="var(--mint-primary)" opacity="0.5" stroke="var(--ink)" stroke-width="2"/>
+        <path d="M170,310 L300,240 L300,255 L170,325 Z" fill="var(--mint-primary)" opacity="0.3" stroke="var(--ink)" stroke-width="2"/>
+        <!-- Middle platform -->
+        <path d="M85,200 L170,160 L255,200 L170,240 Z" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="2"/>
+        <path d="M85,200 L170,240 L170,255 L85,215 Z" fill="var(--mint-primary)" opacity="0.5" stroke="var(--ink)" stroke-width="2"/>
+        <path d="M170,240 L255,200 L255,215 L170,255 Z" fill="var(--mint-primary)" opacity="0.3" stroke="var(--ink)" stroke-width="2"/>
+        <!-- Top platform -->
+        <path d="M130,165 L170,145 L210,165 L170,185 Z" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="2"/>
+        <path d="M130,165 L170,185 L170,195 L130,175 Z" fill="var(--mint-primary)" opacity="0.5" stroke="var(--ink)" stroke-width="2"/>
+        <path d="M170,185 L210,165 L210,175 L170,195 Z" fill="var(--mint-primary)" opacity="0.3" stroke="var(--ink)" stroke-width="2"/>
+        <!-- Spheres on middle platform -->
+        <g style="animation:float-a 3.5s ease-in-out infinite;animation-delay:0s"><circle cx="140" cy="195" r="14" fill="var(--sky)" stroke="var(--ink)" stroke-width="2"/><ellipse cx="135" cy="188" rx="3" ry="2" fill="var(--cream)" opacity="0.65"/></g>
+        <g style="animation:float-a 3.5s ease-in-out infinite;animation-delay:0.7s"><circle cx="170" cy="200" r="12" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="2"/></g>
+        <g style="animation:float-a 3.5s ease-in-out infinite;animation-delay:1.4s"><circle cx="200" cy="195" r="14" fill="var(--butter)" stroke="var(--ink)" stroke-width="2"/><ellipse cx="195" cy="188" rx="3" ry="2" fill="var(--cream)" opacity="0.65"/></g>
+        <!-- Large sphere on top + flag -->
+        <g style="animation:float-b 4.5s ease-in-out infinite">
+          <circle cx="170" cy="125" r="24" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="2"/>
+          <ellipse cx="162" cy="115" rx="5" ry="3.5" fill="var(--cream)" opacity="0.65"/>
+          <line x1="186" y1="125" x2="186" y2="95" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"/>
+          <rect x="186" y="95" width="20" height="12" rx="1" fill="var(--mint-accent)" stroke="var(--ink)" stroke-width="1.5"/>
+        </g>
+        <!-- Dashed connectors -->
+        <line x1="170" y1="149" x2="170" y2="168" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/>
+        <line x1="170" y1="210" x2="170" y2="240" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/>
+        <!-- Avatar beside base -->
+        <g style="animation:sway 4s ease-in-out infinite;transform-origin:50px 270px">
+          <circle cx="50" cy="270" r="16" fill="var(--butter)" stroke="var(--gold)" stroke-width="2" stroke-dasharray="4 3"/>
+          <circle cx="45" cy="266" r="1.5" fill="var(--ink)"/><circle cx="55" cy="266" r="1.5" fill="var(--ink)"/>
+          <path d="M46,274 C48,278 52,278 54,274" stroke="var(--ink)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Wave: cream → mint-light -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--mint-light)"/></svg></div>
+
+<!-- ===== COMPARISON ===== -->
+<section class="compare-sec">
+<div class="container">
+  <div class="section-header compare-header reveal" style="--i:0">
+    <p class="f-eye">OUR ADVANTAGE</p>
+    <h2 class="f-h2">Why Choose B2B Mint</h2>
+    <p class="f-body" style="margin:0 auto;text-align:center;color:var(--ink-light)">We don't optimize for rankings. We engineer systems that turn search into revenue.</p>
+  </div>
+  <div class="compare-grid">
+    <div>
+      <div class="compare-col-head reveal" style="--i:1">
+        <svg class="compare-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true" style="animation:pulse 3s ease-in-out infinite"><circle cx="14" cy="14" r="12" fill="var(--blush)" stroke="var(--ink)" stroke-width="2"/><path d="M9,9 L19,19 M19,9 L9,19" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg>
+        <h3>Without B2B Mint</h3>
+      </div>
+      <div class="compare-item compare-item-bad reveal" style="--i:2">
+        <svg class="compare-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:float-a 3s ease-in-out infinite;animation-delay:0s"><circle cx="12" cy="12" r="8" fill="var(--butter)" stroke="var(--ink)" stroke-width="1.5"/><text x="12" y="15" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="10" fill="var(--ink)">$</text><path d="M18,8 L22,8" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <p>Your SEO agency sends traffic reports. Your CFO asks "how many deals did we close from organic?" Silence.</p>
+      </div>
+      <div class="compare-item compare-item-bad reveal" style="--i:3">
+        <svg class="compare-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.8s ease-in-out infinite;animation-delay:0.4s"><circle cx="6" cy="8" r="3" fill="none" stroke="var(--ink)" stroke-width="1.5"/><circle cx="18" cy="8" r="3" fill="none" stroke="var(--ink)" stroke-width="1.5"/><circle cx="12" cy="18" r="3" fill="none" stroke="var(--ink)" stroke-width="1.5"/></svg>
+        <p>You published 100 blog posts. None of them rank. None of them connect. Google sees noise, not authority.</p>
+      </div>
+      <div class="compare-item compare-item-bad reveal" style="--i:4">
+        <svg class="compare-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:sway 3.5s ease-in-out infinite;animation-delay:0.8s"><rect x="4" y="6" width="16" height="12" rx="4" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="1.5"/><path d="M10,10 L14,14 M14,10 L10,14" stroke="var(--blush)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <p>Buyers ask ChatGPT for recommendations. Your competitor gets cited. You don't exist in the conversation.</p>
+      </div>
+      <div class="compare-item compare-item-bad reveal" style="--i:5">
+        <svg class="compare-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:float-b 3s ease-in-out infinite;animation-delay:1.2s"><circle cx="12" cy="12" r="9" fill="none" stroke="var(--ink)" stroke-width="1.5"/><circle cx="12" cy="12" r="4" fill="none" stroke="var(--ink)" stroke-width="1"/><path d="M5,5 L9,9" stroke="var(--blush)" stroke-width="2" stroke-linecap="round"/></svg>
+        <p>You rank for keywords nobody buying your product would ever search. Top-funnel fluff. Zero pipeline.</p>
+      </div>
+      <div class="compare-item compare-item-bad reveal" style="--i:6">
+        <svg class="compare-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:sway 4s ease-in-out infinite;animation-delay:1.6s"><rect x="4" y="4" width="16" height="16" rx="2" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="1.5"/><line x1="8" y1="8" x2="16" y2="8" stroke="var(--warm-gray)" stroke-width="1" stroke-linecap="round"/><line x1="8" y1="12" x2="14" y2="12" stroke="var(--warm-gray)" stroke-width="1" stroke-linecap="round"/><line x1="8" y1="16" x2="12" y2="16" stroke="var(--warm-gray)" stroke-width="1" stroke-linecap="round"/></svg>
+        <p>Your last agency talked about backlinks and "domain authority." They never mentioned how modern search actually works.</p>
+      </div>
+    </div>
+    <div>
+      <div class="compare-col-head reveal" style="--i:1">
+        <svg class="compare-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite"><circle cx="14" cy="14" r="12" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="2"/><path d="M9,14 L12,18 L20,10" stroke="var(--cream)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3>With B2B Mint</h3>
+      </div>
+      <div class="compare-item compare-item-good reveal" style="--i:2">
+        <svg class="compare-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Every dollar of pipeline is attributed. You walk into board meetings with organic revenue numbers, not vanity metrics.</p>
+      </div>
+      <div class="compare-item compare-item-good reveal" style="--i:3">
+        <svg class="compare-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0.4s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Your content works as a system. Every page reinforces your topical authority. Google and AI models see a niche leader.</p>
+      </div>
+      <div class="compare-item compare-item-good reveal" style="--i:4">
+        <svg class="compare-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0.8s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>Your brand is the answer in AI search — ChatGPT, Perplexity, Gemini. You're cited, not ignored.</p>
+      </div>
+      <div class="compare-item compare-item-good reveal" style="--i:5">
+        <svg class="compare-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:1.2s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>You own "[category] software," "[competitor] alternatives," and every high-intent query that converts. Buyers find you 7 days before purchase.</p>
+      </div>
+      <div class="compare-item compare-item-good reveal" style="--i:6">
+        <svg class="compare-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:1.6s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p>You get semantic architecture, entity optimization, and a system built for how Google and LLMs rank content in 2025.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Wave: mint-light → cream-dark -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--cream-dark)"/></svg></div>
+
+<!-- ===== SERVICES ===== -->
+<section class="services-sec" id="services">
+<div class="container">
+  <div class="section-header services-header reveal" style="--i:0">
+    <p class="f-eye">WHAT WE DO</p>
+    <h2 class="f-h2">SaaS Growth Services</h2>
+    <p class="f-body" style="margin:0 auto;text-align:center">SEO and growth systems built for one outcome: turning search into qualified pipeline. No vanity metrics. No traffic reports your CFO ignores. Just revenue you can trace.</p>
+  </div>
+  <div class="services-grid">
+    <!-- Card 1 -->
+    <div class="svc-card reveal" style="--i:1">
+      <div class="icon-w"><svg viewBox="0 0 56 56" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite"><circle cx="28" cy="28" r="10" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="2"/><circle cx="12" cy="12" r="5" fill="var(--sky)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="44" cy="12" r="5" fill="var(--butter)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="10" cy="40" r="5" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="46" cy="40" r="5" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="28" cy="50" r="5" fill="var(--blush)" stroke="var(--ink)" stroke-width="1.5"/><line x1="22" y1="20" x2="15" y2="15" stroke="var(--ink)" stroke-width="1.5"/><line x1="34" y1="20" x2="41" y2="15" stroke="var(--ink)" stroke-width="1.5"/><line x1="20" y1="33" x2="13" y2="38" stroke="var(--ink)" stroke-width="1.5"/><line x1="36" y1="33" x2="43" y2="38" stroke="var(--ink)" stroke-width="1.5"/><line x1="28" y1="38" x2="28" y2="45" stroke="var(--ink)" stroke-width="1.5"/><rect x="40" y="6" width="6" height="4" rx="1" fill="var(--cream)" stroke="var(--ink)" stroke-width="1"/><rect x="6" y="36" width="6" height="4" rx="1" fill="var(--cream)" stroke="var(--ink)" stroke-width="1"/></svg></div>
+      <p class="f-eye">SEMANTIC SEO</p>
+      <h3 class="f-h3">Semantic SEO Architecture</h3>
+      <p class="f-body">We don't optimize pages — we engineer topical authority. Your site structure, entity relationships, and content hierarchy are built so Google and AI models understand you're the category leader.</p>
+    </div>
+    <!-- Card 2 -->
+    <div class="svc-card reveal" style="--i:2">
+      <div class="icon-w"><svg viewBox="0 0 56 56" fill="none" aria-hidden="true" style="animation:float-b 3s ease-in-out infinite;animation-delay:0.4s"><path d="M16,8 L40,8 L34,32 L22,32 Z" fill="var(--butter)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><line x1="28" y1="32" x2="28" y2="40" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><circle cx="28" cy="46" r="7" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="2"/><text x="28" y="49" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="10" fill="var(--cream)">$</text><line x1="28" y1="36" x2="28" y2="39" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/></svg></div>
+      <p class="f-eye">PIPELINE ATTRIBUTION</p>
+      <h3 class="f-h3">Pipeline Attribution SEO</h3>
+      <p class="f-body">Every strategy answers one question: what revenue did this generate? We track from first click to closed deal, so your CFO sees exactly what organic is worth.</p>
+    </div>
+    <!-- Card 3 -->
+    <div class="svc-card reveal" style="--i:3">
+      <div class="icon-w"><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><g style="animation:pulse 2.8s ease-in-out infinite;animation-delay:0.8s"><path d="M16,14 L32,14 L40,26 L32,38 L16,38 L8,26 Z" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" rx="4"/><circle cx="24" cy="26" r="3" fill="none" stroke="var(--ink)" stroke-width="1.5"/></g><path d="M40,22 C44,20 48,22 48,26" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" style="animation:breathe 1.5s ease-in-out infinite"/><path d="M42,18 C48,14 52,18 52,26" stroke="var(--mint-primary)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6" style="animation:breathe 1.5s ease-in-out infinite;animation-delay:0.5s"/><path d="M44,14 C52,8 56,16 56,26" stroke="var(--mint-primary)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3" style="animation:breathe 1.5s ease-in-out infinite;animation-delay:1s"/></svg></div>
+      <p class="f-eye">AI VISIBILITY</p>
+      <h3 class="f-h3">LLM & AI Search Visibility</h3>
+      <p class="f-body">Your buyers are asking ChatGPT, Perplexity, and Gemini for recommendations. We engineer your brand to be cited — not just indexed. This is where search is going.</p>
+    </div>
+    <!-- Card 4 -->
+    <div class="svc-card reveal" style="--i:4">
+      <div class="icon-w"><svg viewBox="0 0 56 56" fill="none" aria-hidden="true" style="animation:pulse 3s ease-in-out infinite;animation-delay:1.2s"><circle cx="28" cy="28" r="8" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="2"/><circle cx="12" cy="16" r="5" fill="var(--sky)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="44" cy="16" r="5" fill="var(--butter)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="10" cy="38" r="5" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="46" cy="38" r="5" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="18" cy="48" r="4" fill="var(--blush)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="38" cy="48" r="4" fill="var(--mint-accent)" opacity="0.6" stroke="var(--ink)" stroke-width="1.5"/><circle cx="28" cy="10" r="4" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="1.5"/><line x1="22" y1="22" x2="15" y2="18" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/><line x1="34" y1="22" x2="41" y2="18" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/><line x1="22" y1="33" x2="13" y2="36" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/><line x1="34" y1="33" x2="43" y2="36" class="dashed-march" stroke="var(--ink)" stroke-width="1.5" fill="none"/><line x1="24" y1="35" x2="20" y2="44" class="dashed-march" stroke="var(--ink)" stroke-width="1" fill="none"/><line x1="32" y1="35" x2="36" y2="44" class="dashed-march" stroke="var(--ink)" stroke-width="1" fill="none"/><line x1="28" y1="20" x2="28" y2="14" class="dashed-march" stroke="var(--ink)" stroke-width="1" fill="none"/></svg></div>
+      <p class="f-eye">CONTENT NETWORK</p>
+      <h3 class="f-h3">Semantic Content Network</h3>
+      <p class="f-body">We build interconnected content ecosystems that compound — not disconnected blog posts that go nowhere. Every piece strengthens your semantic authority and captures buyers at the right moment.</p>
+    </div>
+    <!-- Card 5 -->
+    <div class="svc-card reveal" style="--i:5">
+      <div class="icon-w"><svg viewBox="0 0 56 56" fill="none" aria-hidden="true" style="animation:sway 3.5s ease-in-out infinite;animation-delay:0s"><ellipse cx="20" cy="28" rx="12" ry="8" fill="var(--sky)" stroke="var(--ink)" stroke-width="2" transform="rotate(-20,20,28)"/><ellipse cx="36" cy="28" rx="12" ry="8" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="2" transform="rotate(20,36,28)"/><line x1="28" y1="22" x2="28" y2="16" stroke="var(--mint-accent)" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="18" x2="28" y2="14" stroke="var(--mint-accent)" stroke-width="1.5" stroke-linecap="round"/><line x1="32" y1="18" x2="28" y2="14" stroke="var(--mint-accent)" stroke-width="1.5" stroke-linecap="round"/><line x1="28" y1="34" x2="28" y2="40" stroke="var(--mint-accent)" stroke-width="1.5" stroke-linecap="round"/><line x1="24" y1="38" x2="28" y2="42" stroke="var(--mint-accent)" stroke-width="1.5" stroke-linecap="round"/><line x1="32" y1="38" x2="28" y2="42" stroke="var(--mint-accent)" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <p class="f-eye">LINK BUILDING</p>
+      <h3 class="f-h3">Authority Link Building</h3>
+      <p class="f-body">Strategic backlinks from topically relevant sources that reinforce your entity signals and accelerate authority. No spammy outreach — only links that move the needle.</p>
+    </div>
+    <!-- Card 6 -->
+    <div class="svc-card reveal" style="--i:6">
+      <div class="icon-w"><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><g style="animation:float-a 3.8s ease-in-out infinite;animation-delay:0.4s"><rect x="12" y="8" width="32" height="40" rx="2" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M34,8 L34,16 L44,16" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="1.5"/></g><g style="animation:pulse 2s ease-in-out infinite"><circle cx="28" cy="30" r="10" fill="none" stroke="var(--warm-gray)" stroke-width="1.5"/><circle cx="28" cy="30" r="6" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="28" cy="30" r="2.5" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5"/></g></svg></div>
+      <p class="f-eye">BOTTOM-FUNNEL</p>
+      <h3 class="f-h3">Bottom-Funnel Content Strategy</h3>
+      <p class="f-body">We capture buyers 7 days before purchase with "[category] software," "[competitor] alternatives," and high-intent comparison content. No top-funnel fluff.</p>
+    </div>
+    <!-- Card 7 -->
+    <div class="svc-card reveal" style="--i:7">
+      <div class="icon-w"><svg viewBox="0 0 56 56" fill="none" aria-hidden="true"><g style="animation:sway 4s ease-in-out infinite;animation-delay:1s"><path d="M10,28 L10,18 C10,14 18,10 18,10 L30,20 L30,36 L18,46 C18,46 10,42 10,38 Z" fill="var(--blush)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="18" y="30" font-family="'Space Grotesk',sans-serif" font-weight="700" font-size="8" fill="var(--ink)">$</text></g><path d="M30,24 C34,20 38,22 38,26" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" style="animation:breathe 1.2s ease-in-out infinite"/><path d="M32,20 C38,14 42,18 42,26" stroke="var(--mint-primary)" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.6" style="animation:breathe 1.2s ease-in-out infinite;animation-delay:0.4s"/><path d="M34,16 C42,8 46,14 46,26" stroke="var(--mint-primary)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.3" style="animation:breathe 1.2s ease-in-out infinite;animation-delay:0.8s"/></svg></div>
+      <p class="f-eye">PAID ADS</p>
+      <h3 class="f-h3">SaaS Paid Ads</h3>
+      <p class="f-body">Paid search and social campaigns built to generate pipeline, not clicks. We target high-intent buyers and optimize for SQLs — not impressions your CFO can't spend.</p>
+    </div>
+    <!-- Card 8 -->
+    <div class="svc-card reveal" style="--i:8">
+      <div class="icon-w"><svg viewBox="0 0 56 56" fill="none" aria-hidden="true" style="animation:spin-slow 10s linear infinite;transform-origin:28px 28px"><path d="M28,6 L32,14 L40,10 L36,18 L44,18 L38,24 L46,28 L38,32 L44,38 L36,38 L40,46 L32,42 L28,50 L24,42 L16,46 L20,38 L12,38 L18,32 L10,28 L18,24 L12,18 L20,18 L16,10 L24,14 Z" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="28" cy="28" r="8" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.5"/><path d="M24,28 L26,31 L32,25" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <p class="f-eye">TECHNICAL SEO</p>
+      <h3 class="f-h3">Technical SEO & Entity Infrastructure</h3>
+      <p class="f-body">Site structure, schema markup, and entity signals that make your semantic authority actually work. The invisible foundation most agencies skip.</p>
+    </div>
+  </div>
+  <div class="services-cta reveal" style="--i:9">
+    <a href="https://calendly.com/hamid-b2bmint/30min" class="btn btn-mint f-btn" target="_blank" rel="noopener">Get Your Growth Roadmap →</a>
+  </div>
+  <p class="services-note reveal" style="--i:10">"No six-month 'ramp-up' excuses. We move fast because SaaS founders don't have time to wait."</p>
+</div>
+</section>
+
+<!-- Wave: cream-dark → mint-primary -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--mint-primary)"/></svg></div>
+
+<!-- ===== PROCESS ===== -->
+<section class="process-sec">
+<div class="container">
+  <div class="section-header process-header reveal" style="--i:0">
+    <p class="f-eye">PIPELINE RESULTS IN 90 DAYS</p>
+    <h2 class="f-h2">Here's How</h2>
+  </div>
+  <div class="process-steps">
+    <!-- Step 01 -->
+    <div class="step-card reveal" style="--i:1">
+      <span class="step-num">01</span>
+      <div class="icon-w">
+        <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <g style="animation:float-a 3.8s ease-in-out infinite">
+            <circle cx="42" cy="42" r="22" fill="rgba(200,240,220,0.3)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+            <line x1="58" y1="58" x2="76" y2="76" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+          </g>
+          <g style="animation:spin-slow 20s linear infinite;transform-origin:42px 42px" opacity="0.5">
+            <line x1="26" y1="30" x2="58" y2="30" stroke="var(--warm-gray)" stroke-width="1"/><line x1="26" y1="38" x2="58" y2="38" stroke="var(--warm-gray)" stroke-width="1"/><line x1="26" y1="46" x2="58" y2="46" stroke="var(--warm-gray)" stroke-width="1"/><line x1="26" y1="54" x2="58" y2="54" stroke="var(--warm-gray)" stroke-width="1"/>
+            <line x1="34" y1="26" x2="34" y2="58" stroke="var(--warm-gray)" stroke-width="1"/><line x1="42" y1="26" x2="42" y2="58" stroke="var(--warm-gray)" stroke-width="1"/><line x1="50" y1="26" x2="50" y2="58" stroke="var(--warm-gray)" stroke-width="1"/>
+          </g>
+          <rect x="36" y="36" width="8" height="8" fill="var(--mint-accent)" opacity="0.6" rx="1"/>
+        </svg>
+      </div>
+      <h3 class="f-h3">Diagnose</h3>
+      <p class="f-body">We audit your site, your competitors, and where AI currently pulls answers in your space. You'll see exactly where you're losing deals.</p>
+    </div>
+    <!-- Arrow -->
+    <div class="step-arrow reveal" style="--i:2"><svg viewBox="0 0 80 48" width="50" fill="none" aria-hidden="true"><path class="draw-path" style="--len:100;--d:300ms" d="M8,24 C30,8 50,40 72,24" stroke="var(--cream)" stroke-width="2" opacity="0.5" fill="none" stroke-linecap="round"/><path d="M66,18 L74,24 L66,30" stroke="var(--cream)" stroke-width="2" opacity="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation:breathe 2.5s ease-in-out infinite;animation-delay:0.5s"/></svg></div>
+    <!-- Step 02 -->
+    <div class="step-card reveal" style="--i:3">
+      <span class="step-num">02</span>
+      <div class="icon-w">
+        <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <rect x="18" y="12" width="64" height="76" rx="3" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M66,12 L66,28 L82,28" fill="var(--cream-dark)" stroke="var(--ink)" stroke-width="1.5"/>
+          <g opacity="0.5"><circle cx="32" cy="32" r="2" fill="var(--warm-gray)"/><circle cx="44" cy="32" r="2" fill="var(--warm-gray)"/><circle cx="56" cy="32" r="2" fill="var(--warm-gray)"/><circle cx="68" cy="32" r="2" fill="var(--warm-gray)"/><circle cx="32" cy="44" r="2" fill="var(--warm-gray)"/><circle cx="44" cy="44" r="2" fill="var(--warm-gray)"/><circle cx="56" cy="44" r="2" fill="var(--warm-gray)"/><circle cx="68" cy="44" r="2" fill="var(--warm-gray)"/><circle cx="32" cy="56" r="2" fill="var(--warm-gray)"/><circle cx="44" cy="56" r="2" fill="var(--warm-gray)"/><circle cx="56" cy="56" r="2" fill="var(--warm-gray)"/><circle cx="68" cy="56" r="2" fill="var(--warm-gray)"/><circle cx="32" cy="68" r="2" fill="var(--warm-gray)"/><circle cx="44" cy="68" r="2" fill="var(--warm-gray)"/><circle cx="56" cy="68" r="2" fill="var(--warm-gray)"/><circle cx="68" cy="68" r="2" fill="var(--warm-gray)"/></g>
+          <path class="draw-path" style="--len:200;--d:400ms" d="M32,68 C40,56 48,48 56,44 C62,40 68,36 68,32" stroke="var(--mint-primary)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <circle cx="32" cy="68" r="4" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1"/>
+          <g style="animation:sway 3s ease-in-out infinite;transform-origin:68px 28px"><line x1="68" y1="28" x2="68" y2="20" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"/><rect x="66" y="16" width="8" height="5" rx="1" fill="var(--mint-accent)" stroke="var(--ink)" stroke-width="1"/></g>
+        </svg>
+      </div>
+      <h3 class="f-h3">Architect</h3>
+      <p class="f-body">We build your custom Search-to-Pipeline Engine — the topics, content, and structure that makes Google and AI see you as the authority.</p>
+    </div>
+    <!-- Arrow -->
+    <div class="step-arrow reveal" style="--i:4"><svg viewBox="0 0 80 48" width="50" fill="none" aria-hidden="true"><path class="draw-path" style="--len:100;--d:500ms" d="M8,24 C30,8 50,40 72,24" stroke="var(--cream)" stroke-width="2" opacity="0.5" fill="none" stroke-linecap="round"/><path d="M66,18 L74,24 L66,30" stroke="var(--cream)" stroke-width="2" opacity="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation:breathe 2.5s ease-in-out infinite;animation-delay:0.5s"/></svg></div>
+    <!-- Step 03 -->
+    <div class="step-card reveal" style="--i:5">
+      <span class="step-num">03</span>
+      <div class="icon-w">
+        <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <!-- Stack of documents -->
+          <rect x="30" y="60" width="40" height="24" rx="2" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="34" y="54" width="36" height="8" rx="2" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.5"/>
+          <rect x="38" y="48" width="32" height="8" rx="2" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.5"/>
+          <!-- Arrows launching up -->
+          <g style="animation:float-b 3s ease-in-out infinite;animation-delay:0s"><path d="M38,40 L38,18" stroke="var(--mint-primary)" stroke-width="2.5" stroke-linecap="round"/><path d="M34,24 L38,16 L42,24" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <g style="animation:float-b 3s ease-in-out infinite;animation-delay:0.6s"><path d="M54,42 L54,22" stroke="var(--mint-primary)" stroke-width="2.5" stroke-linecap="round"/><path d="M50,28 L54,20 L58,28" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+          <g style="animation:float-b 3s ease-in-out infinite;animation-delay:1.2s"><path d="M68,44 L68,26" stroke="var(--mint-primary)" stroke-width="2.5" stroke-linecap="round"/><path d="M64,32 L68,24 L72,32" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+        </svg>
+      </div>
+      <h3 class="f-h3">Execute</h3>
+      <p class="f-body">We build and ship — semantic content, technical fixes, internal linking, and AI optimization. You review and approve.</p>
+    </div>
+    <!-- Arrow -->
+    <div class="step-arrow reveal" style="--i:6"><svg viewBox="0 0 80 48" width="50" fill="none" aria-hidden="true"><path class="draw-path" style="--len:100;--d:700ms" d="M8,24 C30,8 50,40 72,24" stroke="var(--cream)" stroke-width="2" opacity="0.5" fill="none" stroke-linecap="round"/><path d="M66,18 L74,24 L66,30" stroke="var(--cream)" stroke-width="2" opacity="0.5" fill="none" stroke-linecap="round" stroke-linejoin="round" style="animation:breathe 2.5s ease-in-out infinite;animation-delay:0.5s"/></svg></div>
+    <!-- Step 04 -->
+    <div class="step-card reveal" style="--i:7">
+      <span class="step-num">04</span>
+      <div class="icon-w">
+        <svg viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <line x1="15" y1="75" x2="85" y2="75" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+          <line x1="15" y1="75" x2="15" y2="15" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/>
+          <path class="draw-path" style="--len:200;--d:600ms" d="M20,70 C30,65 40,58 50,48 C60,38 70,25 80,18" stroke="var(--mint-accent)" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <circle cx="35" cy="62" r="4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1.5"/>
+          <circle cx="50" cy="48" r="4" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/>
+          <circle cx="65" cy="32" r="5" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5"/>
+          <g style="animation:pulse 1.8s ease-in-out infinite"><circle cx="80" cy="18" r="6" fill="var(--mint-accent)" stroke="var(--ink)" stroke-width="1.5"/></g>
+        </svg>
+      </div>
+      <h3 class="f-h3">Compound</h3>
+      <p class="f-body">Every piece strengthens the system. Rankings climb. AI starts citing you. Leads flow. Your organic channel becomes predictable pipeline.</p>
+    </div>
+  </div>
+  <div class="process-cta reveal" style="--i:8">
+    <a href="https://calendly.com/hamid-b2bmint/30min" class="btn btn-cream f-btn" target="_blank" rel="noopener">Book Your Pipeline Audit →</a>
+  </div>
+</div>
+</section>
+
+<!-- Wave: mint-primary → cream -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--cream)"/></svg></div>
+
+<!-- ===== INVESTMENT ===== -->
+<section class="invest-sec">
+<div class="container">
+  <div class="section-header invest-header reveal" style="--i:0">
+    <p class="f-eye">THE INVESTMENT</p>
+    <h2 class="f-h2">What You Get When You Partner With B2B Mint</h2>
+    <p class="f-body" style="margin:0 auto;text-align:center;color:var(--ink-light)">We don't do content retainers. We install pipeline engines.</p>
+  </div>
+  <div class="invest-grid">
+    <div>
+      <p class="invest-col-label reveal" style="--i:1">CORE DELIVERABLES</p>
+      <div class="invest-item reveal" style="--i:2"><svg class="invest-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Semantic SEO Strategy & Site Architecture</p></div>
+      <div class="invest-item reveal" style="--i:3"><svg class="invest-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0.4s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Monthly Pipeline-First Content</p></div>
+      <div class="invest-item reveal" style="--i:4"><svg class="invest-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0.8s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Technical SEO & Entity Optimization</p></div>
+      <div class="invest-item reveal" style="--i:5"><svg class="invest-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:1.2s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>LLM & AI Search Visibility</p></div>
+      <div class="invest-item reveal" style="--i:6"><svg class="invest-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:1.6s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Authority Link Building</p></div>
+      <div class="invest-item reveal" style="--i:7"><svg class="invest-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:2s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Pipeline Attribution Reporting</p></div>
+    </div>
+    <div>
+      <p class="invest-col-label reveal" style="--i:1">EXCLUSIVE BONUSES</p>
+      <div class="invest-item reveal" style="--i:2"><svg class="invest-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:float-a 2.5s ease-in-out infinite;animation-delay:0s"><path d="M12,2 L14.5,8 L21,8.5 L16,13 L17.5,20 L12,16.5 L6.5,20 L8,13 L3,8.5 L9.5,8 Z" fill="var(--gold)" stroke="var(--ink)" stroke-width="1.5"/></svg><p><strong>Competitor Authority Gap Analysis:</strong> Know where you're losing</p></div>
+      <div class="invest-item reveal" style="--i:3"><svg class="invest-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:float-a 2.5s ease-in-out infinite;animation-delay:0.5s"><path d="M12,2 L14.5,8 L21,8.5 L16,13 L17.5,20 L12,16.5 L6.5,20 L8,13 L3,8.5 L9.5,8 Z" fill="var(--gold)" stroke="var(--ink)" stroke-width="1.5"/></svg><p><strong>AI Citation Tracking Dashboard:</strong> See when AI recommends you</p></div>
+      <div class="invest-item reveal" style="--i:4"><svg class="invest-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:float-a 2.5s ease-in-out infinite;animation-delay:1s"><path d="M12,2 L14.5,8 L21,8.5 L16,13 L17.5,20 L12,16.5 L6.5,20 L8,13 L3,8.5 L9.5,8 Z" fill="var(--gold)" stroke="var(--ink)" stroke-width="1.5"/></svg><p><strong>Quarterly Strategy Reviews:</strong> Roadmaps that evolve with you</p></div>
+    </div>
+  </div>
+  <!-- Pricing Card -->
+  <div class="pricing-card reveal" style="--i:8">
+    <div>
+      <p class="f-eye" style="color:var(--mint-primary)">INVESTMENT</p>
+      <p class="pricing-price">Starting at $3,000/mo</p>
+      <p class="pricing-sub">for qualified SaaS brands ready to turn search into pipeline.</p>
+      <p class="pricing-note">We take on 4 new clients per quarter. Not for exclusivity — because real engine-building takes focus.</p>
+      <a href="https://calendly.com/hamid-b2bmint/30min" class="btn btn-mint f-btn" target="_blank" rel="noopener">See If We Are a Fit →</a>
+    </div>
+    <div class="pricing-ill">
+      <svg viewBox="0 0 120 140" fill="none" aria-hidden="true" style="animation:float-b 4s ease-in-out infinite">
+        <line x1="60" y1="130" x2="60" y2="50" stroke="var(--cream)" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+        <path d="M60,70 L60,20" stroke="var(--mint-accent)" stroke-width="3" stroke-linecap="round"/>
+        <path d="M50,35 L60,18 L70,35" stroke="var(--mint-accent)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="20" y1="70" x2="100" y2="70" stroke="var(--cream)" stroke-width="1" opacity="0.2" stroke-linecap="round"/>
+      </svg>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Wave: cream → mint-light -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--mint-light)"/></svg></div>
+
+<!-- ===== WHO THIS IS FOR ===== -->
+<section class="fit-sec">
+<div class="container">
+  <div class="section-header fit-header reveal" style="--i:0">
+    <p class="f-eye">WHO THIS IS FOR</p>
+    <h2 class="f-h2">B2B Mint Is Built for Brands That:</h2>
+  </div>
+  <div class="fit-grid">
+    <div>
+      <div class="fit-item reveal" style="--i:1"><svg class="fit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Have product-market fit and need scalable pipeline — not just "more content"</p></div>
+      <div class="fit-item reveal" style="--i:2"><svg class="fit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0.4s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Want SEO that shows up in board meetings with revenue, not traffic reports</p></div>
+      <div class="fit-item reveal" style="--i:3"><svg class="fit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0.8s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Are ready to invest $3,000/mo+ in compounding organic growth</p></div>
+      <div class="fit-item reveal" style="--i:4"><svg class="fit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:1.2s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Understand that Google and AI search are changing — and want to lead, not catch up</p></div>
+      <div class="fit-item reveal" style="--i:5"><svg class="fit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:1.6s"><circle cx="12" cy="12" r="9" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,12 L10,15 L16,9" stroke="var(--mint-primary)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><p>Need a strategic partner, not an order-taking agency</p></div>
+    </div>
+    <div>
+      <div class="fit-item fit-item-bad reveal" style="--i:1"><svg class="fit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:sway 3s ease-in-out infinite;animation-delay:0s"><circle cx="12" cy="12" r="9" fill="var(--blush)" opacity="0.5" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,8 L16,16 M16,8 L8,16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg><p>Looking for cheap backlinks or keyword-stuffed blogs — we're not your agency</p></div>
+      <div class="fit-item fit-item-bad reveal" style="--i:2"><svg class="fit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:sway 3s ease-in-out infinite;animation-delay:0.5s"><circle cx="12" cy="12" r="9" fill="var(--blush)" opacity="0.5" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,8 L16,16 M16,8 L8,16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg><p>Want overnight results without building real authority — this isn't paid ads</p></div>
+      <div class="fit-item fit-item-bad reveal" style="--i:3"><svg class="fit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:sway 3s ease-in-out infinite;animation-delay:1s"><circle cx="12" cy="12" r="9" fill="var(--blush)" opacity="0.5" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,8 L16,16 M16,8 L8,16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg><p>Just need "someone to do SEO" without caring about pipeline — we won't be a fit</p></div>
+      <div class="fit-item fit-item-bad reveal" style="--i:4"><svg class="fit-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true" style="animation:sway 3s ease-in-out infinite;animation-delay:1.5s"><circle cx="12" cy="12" r="9" fill="var(--blush)" opacity="0.5" stroke="var(--ink)" stroke-width="1.5"/><path d="M8,8 L16,16 M16,8 L8,16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg><p>Not ready to invest in SEO as a growth channel — we only work with committed brands</p></div>
+    </div>
+  </div>
+  <div class="fit-cta reveal" style="--i:6">
+    <a href="https://calendly.com/hamid-b2bmint/30min" class="btn btn-mint f-btn" target="_blank" rel="noopener">Book a Call →</a>
+  </div>
+</div>
+</section>
+
+<!-- Wave: mint-light → cream-dark -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--cream-dark)"/></svg></div>
+
+<!-- ===== TEAM ===== -->
+<section class="team-sec">
+<div class="container">
+  <div class="section-header team-header reveal" style="--i:0">
+    <p class="f-eye">OUR TEAM</p>
+    <h2 class="f-h2">The People Who Build Your Pipeline</h2>
+  </div>
+  <div class="team-grid">
+    <div class="team-card reveal" style="--i:1"><div class="team-avatar"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true" style="animation:sway 3.5s ease-in-out infinite;animation-delay:0s"><circle cx="32" cy="32" r="28" fill="var(--butter)" stroke="var(--gold)" stroke-width="2" stroke-dasharray="4 3"/><circle cx="24" cy="28" r="2" fill="var(--ink)"/><circle cx="40" cy="28" r="2" fill="var(--ink)"/><path d="M24,38 C28,43 36,43 40,38" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M20,18 C24,12 40,12 44,18" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="team-name">Muhammad Hamid Khan</p><p class="team-role">Founder & CEO</p><p class="team-bio">Built B2B Mint to fix what's broken in SaaS SEO.</p></div>
+    <div class="team-card reveal" style="--i:2"><div class="team-avatar"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true" style="animation:sway 3.5s ease-in-out infinite;animation-delay:0.5s"><circle cx="32" cy="32" r="28" fill="var(--sky)" stroke="var(--gold)" stroke-width="2" stroke-dasharray="4 3"/><circle cx="24" cy="28" r="2" fill="var(--ink)"/><circle cx="40" cy="28" r="2" fill="var(--ink)"/><path d="M26,38 C30,42 34,42 38,38" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18,20 C20,14 28,16 32,18 C36,16 44,14 46,20" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="team-name">Abdul Rehman</p><p class="team-role">Visual Designer</p><p class="team-bio">5 years turning ideas into visuals that convert.</p></div>
+    <div class="team-card reveal" style="--i:3"><div class="team-avatar"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true" style="animation:sway 3.5s ease-in-out infinite;animation-delay:1s"><circle cx="32" cy="32" r="28" fill="var(--mint-light)" stroke="var(--gold)" stroke-width="2" stroke-dasharray="4 3"/><circle cx="24" cy="28" r="2" fill="var(--ink)"/><circle cx="40" cy="28" r="2" fill="var(--ink)"/><path d="M26,38 C30,42 34,42 38,38" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M22,16 C26,12 38,12 42,16" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="team-name">Arslan Tufail</p><p class="team-role">BOFU Writer</p><p class="team-bio">6 years crafting bottom-funnel content that converts.</p></div>
+    <div class="team-card reveal" style="--i:4"><div class="team-avatar"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true" style="animation:sway 3.5s ease-in-out infinite;animation-delay:1.5s"><circle cx="32" cy="32" r="28" fill="var(--blush)" stroke="var(--gold)" stroke-width="2" stroke-dasharray="4 3"/><circle cx="24" cy="28" r="2" fill="var(--ink)"/><circle cx="40" cy="28" r="2" fill="var(--ink)"/><path d="M26,38 C30,42 34,42 38,38" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M20,18 C24,14 32,12 36,16 L42,14 C44,16 44,20 42,22" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="team-name">Irtaza Khalid</p><p class="team-role">B2B/SaaS Writer</p><p class="team-bio">3 years writing high-intent SaaS content that ranks and closes.</p></div>
+    <div class="team-card reveal" style="--i:5"><div class="team-avatar"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true" style="animation:sway 3.5s ease-in-out infinite;animation-delay:2s"><circle cx="32" cy="32" r="28" fill="var(--cream-dark)" stroke="var(--gold)" stroke-width="2" stroke-dasharray="4 3"/><circle cx="24" cy="28" r="2" fill="var(--ink)"/><circle cx="40" cy="28" r="2" fill="var(--ink)"/><path d="M26,38 C30,42 34,42 38,38" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18,22 C18,14 26,10 32,12 C38,10 46,14 46,22" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="team-name">Kashaf Khalid</p><p class="team-role">Content Editor</p><p class="team-bio">5 years turning SaaS complexity into content that drives pipeline.</p></div>
+    <div class="team-card reveal" style="--i:6"><div class="team-avatar"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true" style="animation:sway 3.5s ease-in-out infinite;animation-delay:2.5s"><circle cx="32" cy="32" r="28" fill="var(--butter)" stroke="var(--gold)" stroke-width="2" stroke-dasharray="4 3"/><circle cx="24" cy="28" r="2" fill="var(--ink)"/><circle cx="40" cy="28" r="2" fill="var(--ink)"/><path d="M26,38 C30,42 34,42 38,38" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M18,22 C20,14 28,12 32,16 C36,12 44,14 46,22" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="team-name">Maryam Shafique</p><p class="team-role">BOFU Writer</p><p class="team-bio">3 years creating content that sells.</p></div>
+    <div class="team-card reveal" style="--i:7"><div class="team-avatar"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true" style="animation:sway 3.5s ease-in-out infinite;animation-delay:3s"><circle cx="32" cy="32" r="28" fill="var(--sky)" stroke="var(--gold)" stroke-width="2" stroke-dasharray="4 3"/><circle cx="24" cy="28" r="2" fill="var(--ink)"/><circle cx="40" cy="28" r="2" fill="var(--ink)"/><path d="M26,38 C30,42 34,42 38,38" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M22,16 C26,12 38,12 42,16" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="team-name">Muhammad Awais</p><p class="team-role">Design Lead</p><p class="team-bio">8 years of design leadership across brand and web.</p></div>
+    <div class="team-card reveal" style="--i:8"><div class="team-avatar"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true" style="animation:sway 3.5s ease-in-out infinite;animation-delay:3.5s"><circle cx="32" cy="32" r="28" fill="var(--mint-light)" stroke="var(--gold)" stroke-width="2" stroke-dasharray="4 3"/><circle cx="24" cy="28" r="2" fill="var(--ink)"/><circle cx="40" cy="28" r="2" fill="var(--ink)"/><path d="M26,38 C30,42 34,42 38,38" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M20,18 C24,12 40,12 44,18" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="team-name">Nauman Farooq</p><p class="team-role">Content Lead</p><p class="team-bio">7 years running content engines from strategy to published page.</p></div>
+    <div class="team-card reveal" style="--i:9"><div class="team-avatar"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true" style="animation:sway 3.5s ease-in-out infinite;animation-delay:4s"><circle cx="32" cy="32" r="28" fill="var(--blush)" stroke="var(--gold)" stroke-width="2" stroke-dasharray="4 3"/><circle cx="24" cy="28" r="2" fill="var(--ink)"/><circle cx="40" cy="28" r="2" fill="var(--ink)"/><path d="M26,38 C30,42 34,42 38,38" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/><path d="M22,16 C28,10 36,10 42,16" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><p class="team-name">Shahzad Ali</p><p class="team-role">SaaS SEO Strategist</p><p class="team-bio">Architects the semantic strategies that make clients category leaders.</p></div>
+  </div>
+</div>
+</section>
+
+<!-- Wave: cream-dark → ink -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--ink)"/></svg></div>
+
+<!-- ===== FOUNDER CTA ===== -->
+<section class="founder-sec">
+<div class="container">
+  <div class="section-header">
+    <p class="f-eye reveal" style="--i:0;color:var(--mint-primary)">TIRED OF SEOS THAT PROMISE BIG?</p>
+    <h2 class="f-h2 reveal" style="--i:1;color:var(--cream);margin-left:auto;margin-right:auto">Own the Search Results Your Buyers Actually Use.</h2>
+  </div>
+  <div class="founder-grid">
+    <div>
+      <p class="f-body reveal" style="--i:2;color:var(--warm-gray)">Your future customers are searching right now — on Google, in ChatGPT, on Perplexity. The question is: are they finding you or your competitors?</p>
+      <p class="f-body reveal" style="--i:3;color:var(--warm-gray);margin-top:12px">You've probably tried SEO before. Maybe paid an agency that sent traffic reports while pipeline stayed flat. Or published 100 blog posts that rank for nothing. That's not SEO. That's expensive content storage.</p>
+      <div class="founder-list reveal" style="--i:4">
+        <div class="founder-list-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="animation:pulse 2s ease-in-out infinite;animation-delay:0s;flex-shrink:0;margin-top:4px"><circle cx="8" cy="8" r="5" fill="var(--mint-accent)"/></svg><p>You rank for the queries buyers search 7 days before purchase</p></div>
+        <div class="founder-list-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="animation:pulse 2s ease-in-out infinite;animation-delay:0.3s;flex-shrink:0;margin-top:4px"><circle cx="8" cy="8" r="5" fill="var(--mint-accent)"/></svg><p>You show up in AI answers — not just Google's page one</p></div>
+        <div class="founder-list-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="animation:pulse 2s ease-in-out infinite;animation-delay:0.6s;flex-shrink:0;margin-top:4px"><circle cx="8" cy="8" r="5" fill="var(--mint-accent)"/></svg><p>Your competitors wonder how you outrank them everywhere</p></div>
+        <div class="founder-list-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="animation:pulse 2s ease-in-out infinite;animation-delay:0.9s;flex-shrink:0;margin-top:4px"><circle cx="8" cy="8" r="5" fill="var(--mint-accent)"/></svg><p>Your CFO finally sees revenue from organic — not just traffic</p></div>
+        <div class="founder-list-item"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" style="animation:pulse 2s ease-in-out infinite;animation-delay:1.2s;flex-shrink:0;margin-top:4px"><circle cx="8" cy="8" r="5" fill="var(--mint-accent)"/></svg><p>You stop paying for clicks and start owning the conversation</p></div>
+      </div>
+      <div class="founder-quote reveal" style="--i:5">
+        <p>"Every search is buyer intent. SEO is how you turn that intent into pipeline."</p>
+        <span>HAMID KHAN · FOUNDER OF B2BMINT</span>
+      </div>
+      <a href="https://calendly.com/hamid-b2bmint/30min" class="btn btn-cream f-btn reveal" style="--i:6" target="_blank" rel="noopener">See Your Growth Potential →</a>
+    </div>
+    <div class="founder-ill reveal" style="--i:3">
+      <svg viewBox="0 0 300 360" fill="none" aria-hidden="true">
+        <!-- Isometric platform -->
+        <path d="M100,300 L150,275 L200,300 L150,325 Z" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M100,300 L150,325 L150,335 L100,310 Z" fill="var(--mint-primary)" opacity="0.5" stroke="var(--ink)" stroke-width="2"/>
+        <path d="M150,325 L200,300 L200,310 L150,335 Z" fill="var(--mint-primary)" opacity="0.3" stroke="var(--ink)" stroke-width="2"/>
+        <!-- Figure -->
+        <g>
+          <ellipse cx="150" cy="260" rx="24" ry="30" fill="var(--cream)" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="150" cy="200" r="28" fill="var(--butter)" stroke="var(--ink)" stroke-width="2"/>
+          <circle cx="140" cy="194" r="2.5" fill="var(--ink)"/><circle cx="160" cy="194" r="2.5" fill="var(--ink)"/>
+          <path d="M140,208 C144,214 156,214 160,208" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M130,184 C136,174 164,174 170,184" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <!-- Pointing hand -->
+          <g style="animation:sway 3s ease-in-out infinite;transform-origin:180px 240px">
+            <path d="M174,240 C190,235 210,225 230,220" stroke="var(--ink)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M225,215 L232,220 L225,225" stroke="var(--ink)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+        </g>
+        <!-- Floating arrows -->
+        <g style="animation:float-b 3s ease-in-out infinite;animation-delay:0s"><path d="M60,200 L60,160" stroke="var(--mint-light)" stroke-width="2" stroke-linecap="round"/><path d="M55,168 L60,158 L65,168" stroke="var(--mint-light)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <g style="animation:float-b 3s ease-in-out infinite;animation-delay:0.8s"><path d="M240,180 L240,140" stroke="var(--mint-accent)" stroke-width="2" stroke-linecap="round"/><path d="M235,148 L240,138 L245,148" stroke="var(--mint-accent)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <g style="animation:float-b 3s ease-in-out infinite;animation-delay:1.6s"><path d="M80,280 L80,250" stroke="var(--mint-light)" opacity="0.6" stroke-width="2" stroke-linecap="round"/><path d="M75,258 L80,248 L85,258" stroke="var(--mint-light)" opacity="0.6" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <g style="animation:float-b 3s ease-in-out infinite;animation-delay:2.4s"><path d="M220,280 L220,255" stroke="var(--mint-accent)" opacity="0.5" stroke-width="2" stroke-linecap="round"/><path d="M215,263 L220,253 L225,263" stroke="var(--mint-accent)" opacity="0.5" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <!-- Stars -->
+        <g style="animation:float-a 2.2s ease-in-out infinite;animation-delay:0.5s" opacity="0.35"><path d="M50,150 L53,140 L56,150 L46,145 L60,145 Z" fill="var(--gold)" stroke="var(--ink)" stroke-width="1"/></g>
+        <g style="animation:float-a 2.2s ease-in-out infinite;animation-delay:1.3s" opacity="0.3"><path d="M260,160 L263,150 L266,160 L256,155 L270,155 Z" fill="var(--gold)" stroke="var(--ink)" stroke-width="1"/></g>
+      </svg>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Wave: ink → mint-primary -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--mint-primary)"/></svg></div>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta-sec">
+<div class="container">
+  <div class="final-cta-inner">
+    <div class="section-header">
+      <p class="f-eye reveal" style="--i:0;color:rgba(244,240,232,0.55)">GET STARTED</p>
+      <h2 class="f-h2 reveal" style="--i:1">Ready to Turn<br><span class="underline-word">Search<svg class="ul-svg" viewBox="0 0 180 14" preserveAspectRatio="none" aria-hidden="true"><path class="draw-path" style="--len:320;--d:200ms" d="M2,10 C36,3 80,13 120,7 C155,2 165,12 178,8" stroke="var(--mint-accent)" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg></span> Into Pipeline?</h2>
+      <p class="section-subhead reveal" style="--i:2;color:rgba(244,240,232,0.8)">Stop chasing rankings your CFO ignores. Start generating revenue from organic.</p>
+    </div>
+    <div class="final-cta-ctas reveal" style="--i:3">
+      <a href="https://calendly.com/hamid-b2bmint/30min" class="btn btn-cream f-btn" target="_blank" rel="noopener">Get Your Pipeline Audit →</a>
+      <a href="#" class="btn btn-outline f-btn">Grab the 90-Day SEO Playbook</a>
+    </div>
+    <p class="final-cta-trust reveal" style="--i:4">WE TAKE ON 4 NEW CLIENTS PER QUARTER · SPOTS ARE LIMITED</p>
+  </div>
+</div>
+<!-- Botanical -->
+<svg class="botanical-bg" viewBox="0 0 300 500" fill="none" aria-hidden="true" style="animation:sway 10s ease-in-out infinite">
+  <path d="M150,490 C148,400 152,300 150,200 C149,150 145,100 150,50" stroke="var(--cream)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <ellipse cx="120" cy="100" rx="25" ry="12" transform="rotate(-30,120,100)" fill="none" stroke="var(--cream)" stroke-width="1.5"/><ellipse cx="180" cy="140" rx="25" ry="12" transform="rotate(25,180,140)" fill="none" stroke="var(--cream)" stroke-width="1.5"/><ellipse cx="115" cy="190" rx="22" ry="10" transform="rotate(-35,115,190)" fill="none" stroke="var(--cream)" stroke-width="1.5"/><ellipse cx="185" cy="230" rx="22" ry="10" transform="rotate(30,185,230)" fill="none" stroke="var(--cream)" stroke-width="1.5"/><ellipse cx="118" cy="280" rx="20" ry="9" transform="rotate(-28,118,280)" fill="none" stroke="var(--cream)" stroke-width="1.5"/><ellipse cx="182" cy="320" rx="20" ry="9" transform="rotate(32,182,320)" fill="none" stroke="var(--cream)" stroke-width="1.5"/><ellipse cx="122" cy="370" rx="18" ry="8" transform="rotate(-25,122,370)" fill="none" stroke="var(--cream)" stroke-width="1.5"/><ellipse cx="178" cy="410" rx="18" ry="8" transform="rotate(28,178,410)" fill="none" stroke="var(--cream)" stroke-width="1.5"/><ellipse cx="125" cy="450" rx="16" ry="7" transform="rotate(-22,125,450)" fill="none" stroke="var(--cream)" stroke-width="1.5"/>
+  <circle cx="145" cy="40" r="6" fill="var(--cream)" opacity="0.5"/><circle cx="155" cy="35" r="5" fill="var(--cream)" opacity="0.4"/><circle cx="150" cy="28" r="4" fill="var(--cream)" opacity="0.3"/>
+</svg>
+</section>
+
+<!-- Wave: mint-primary → cream -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--cream)"/></svg></div>
+
+<!-- ===== BLOG ===== -->
+<section class="blog-sec" id="blog">
+<div class="container">
+  <div class="section-header blog-header reveal" style="--i:0">
+    <p class="f-eye">FREE RESOURCES</p>
+    <h2 class="f-h2">SaaS SEO Guides That Actually Drive Revenue</h2>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card reveal" style="--i:1">
+      <div class="blog-card-ill"><svg viewBox="0 0 200 120" fill="none" aria-hidden="true"><circle cx="60" cy="55" r="18" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" style="animation:float-a 3s ease-in-out infinite"/><circle cx="105" cy="50" r="18" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" style="animation:float-a 3s ease-in-out infinite;animation-delay:0.5s"/><circle cx="150" cy="58" r="18" fill="var(--cream)" stroke="var(--ink)" stroke-width="2" style="animation:float-a 3s ease-in-out infinite;animation-delay:1s"/><path d="M72,42 C80,36 85,38 88,42" stroke="var(--mint-primary)" stroke-width="1.5" fill="none" stroke-linecap="round" style="animation:breathe 1.5s ease-in-out infinite"/><path d="M75,36 C84,28 90,32 95,38" stroke="var(--mint-primary)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5" style="animation:breathe 1.5s ease-in-out infinite;animation-delay:0.5s"/><path d="M118,38 C126,32 132,34 136,40" stroke="var(--mint-primary)" stroke-width="1.5" fill="none" stroke-linecap="round" style="animation:breathe 1.5s ease-in-out infinite;animation-delay:0.3s"/><path d="M121,32 C130,24 138,28 142,36" stroke="var(--mint-primary)" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5" style="animation:breathe 1.5s ease-in-out infinite;animation-delay:0.8s"/></svg></div>
+      <div class="blog-card-body"><p class="blog-tag">AI SEO</p><h3 class="f-h3">How to Get Your SaaS Brand Mentioned by ChatGPT, Perplexity & Gemini</h3><p class="blog-meta">Muhammad Hamid Khan · 25 Jan 2026</p></div>
+    </div>
+    <div class="blog-card reveal" style="--i:2">
+      <div class="blog-card-ill"><svg viewBox="0 0 200 120" fill="none" aria-hidden="true"><rect x="30" y="30" width="60" height="60" rx="3" fill="var(--cream)" stroke="var(--ink)" stroke-width="2"/><rect x="40" y="68" width="10" height="16" rx="1" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5" style="animation:pulse 2.5s ease-in-out infinite"/><rect x="55" y="58" width="10" height="26" rx="1" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0.3s"/><rect x="70" y="48" width="10" height="36" rx="1" fill="var(--mint-accent)" stroke="var(--ink)" stroke-width="1.5" style="animation:pulse 2.5s ease-in-out infinite;animation-delay:0.6s"/><line x1="110" y1="70" x2="170" y2="70" stroke="var(--blush)" stroke-width="2" stroke-linecap="round"/><line x1="110" y1="55" x2="170" y2="55" stroke="var(--warm-gray)" stroke-width="1" opacity="0.4" stroke-linecap="round"/></svg></div>
+      <div class="blog-card-body"><p class="blog-tag">SAAS PIPELINE</p><h3 class="f-h3">Why Your SaaS Content Strategy Is Generating Traffic But Not Pipeline</h3><p class="blog-meta">Muhammad Hamid Khan · 07 Jan 2026</p></div>
+    </div>
+    <div class="blog-card reveal" style="--i:3">
+      <div class="blog-card-ill"><svg viewBox="0 0 200 120" fill="none" aria-hidden="true"><g style="animation:float-b 4s ease-in-out infinite"><path d="M100,90 L100,60" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><path d="M100,60 L80,40" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><path d="M100,60 L120,40" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><path d="M80,40 L65,25" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"/><path d="M80,40 L90,22" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"/><path d="M120,40 L110,22" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"/><path d="M120,40 L140,28" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round"/><circle cx="100" cy="90" r="6" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="80" cy="40" r="5" fill="var(--mint-light)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="120" cy="40" r="5" fill="var(--sky)" stroke="var(--ink)" stroke-width="1.5"/><circle cx="65" cy="25" r="4" fill="var(--butter)" stroke="var(--ink)" stroke-width="1"/><circle cx="90" cy="22" r="4" fill="var(--cream)" stroke="var(--ink)" stroke-width="1"/><circle cx="110" cy="22" r="4" fill="var(--blush)" stroke="var(--ink)" stroke-width="1"/><circle cx="140" cy="28" r="4" fill="var(--mint-accent)" opacity="0.6" stroke="var(--ink)" stroke-width="1"/></g></svg></div>
+      <div class="blog-card-body"><p class="blog-tag">TOPICAL AUTHORITY</p><h3 class="f-h3">Topical Authority for SaaS: The Compound Growth Model Traditional SEO Ignores</h3><p class="blog-meta">Muhammad Hamid Khan · 07 Jan 2026</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Wave: cream → ink -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--ink)"/></svg></div>
+
+<!-- ===== NEWSLETTER ===== -->
+<section class="news-sec" id="newsletter">
+<div class="container">
+  <div class="section-header">
+    <p class="f-eye reveal" style="--i:0;color:var(--mint-primary)">NEWSLETTER</p>
+    <h2 class="f-h2 reveal" style="--i:1;color:var(--cream);margin-left:auto;margin-right:auto">Join 3,700+ SaaS Founders Turning Search Into Pipeline</h2>
+  </div>
+  <div class="news-grid">
+    <div>
+      <div class="news-form reveal" style="--i:2">
+        <input type="email" class="news-input" placeholder="Your email address">
+        <button class="news-btn" onclick="alert('Thanks! Check your inbox.')">Get the Free Playbook →</button>
+      </div>
+    </div>
+    <div class="news-ill reveal" style="--i:3">
+      <svg viewBox="0 0 120 100" fill="none" aria-hidden="true" style="animation:float-a 4s ease-in-out infinite">
+        <rect x="10" y="30" width="100" height="60" rx="4" fill="var(--ink-light)" stroke="var(--cream)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10,33 L60,65 L110,33" stroke="var(--cream)" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <!-- Sprout -->
+        <g style="animation:sway 3s ease-in-out infinite;transform-origin:60px 30px">
+          <path d="M60,30 L60,12" stroke="var(--mint-primary)" stroke-width="2" stroke-linecap="round"/>
+          <path d="M60,20 C55,16 52,12 55,8" stroke="var(--mint-primary)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="53" cy="7" rx="5" ry="3" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1" transform="rotate(-30,53,7)"/>
+          <path d="M60,16 C65,12 68,8 65,4" stroke="var(--mint-primary)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <ellipse cx="67" cy="3" rx="5" ry="3" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1" transform="rotate(30,67,3)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Wave: ink → cream -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--cream)"/></svg></div>
+
+<!-- ===== FOUNDER MESSAGE ===== -->
+<section class="msg-sec">
+<div class="container">
+  <div class="section-header">
+    <p class="f-eye reveal" style="--i:0">A MESSAGE</p>
+    <h2 class="f-h2 reveal" style="--i:1;color:var(--ink);margin-left:auto;margin-right:auto">Message From Our Founder</h2>
+    <h3 class="f-h3 reveal" style="--i:2;margin-left:auto;margin-right:auto">"Built B2B Mint Because Most SEO Agencies Are Broken."</h3>
+  </div>
+  <div class="msg-grid">
+    <div>
+      <p class="f-body reveal" style="--i:3">I've seen too many SaaS founders burned by agencies that celebrate traffic while pipeline stays flat. Reports full of green arrows that mean nothing to your CFO. Content strategies that generate blogs, not buyers. That's not SEO — that's expensive busywork.</p>
+      <p class="f-body reveal" style="--i:4;margin-top:12px">B2B Mint exists to fix that. We don't chase rankings for vanity. We build semantic authority systems that make your brand the answer — in Google, in ChatGPT, in every search that matters. If it doesn't generate pipeline, we don't do it.</p>
+      <p class="f-body reveal" style="--i:5;margin-top:12px">We take on limited clients because real results require focus, not volume. If you're serious about turning organic into your most predictable growth channel — let's talk.</p>
+      <p class="msg-attr reveal" style="--i:6">Hamid Khan · Founder of B2BMint</p>
+      <a href="https://calendly.com/hamid-b2bmint/30min" class="btn btn-mint f-btn reveal" style="--i:7;margin-top:24px" target="_blank" rel="noopener">Let's Talk →</a>
+    </div>
+    <div class="msg-flourish reveal" style="--i:4">
+      <svg viewBox="0 0 200 200" fill="none" aria-hidden="true">
+        <path class="draw-path" style="--len:600;--d:300ms" d="M20,180 C30,160 50,140 80,130 C110,120 130,140 120,160 C110,180 80,170 70,150 C60,130 70,100 100,80 C130,60 160,70 170,50 C180,30 160,20 140,30 C120,40 110,60 130,70" stroke="var(--mint-primary)" stroke-width="2.5" fill="none" stroke-linecap="round" style="animation:breathe 6s ease-in-out infinite;animation-delay:1.5s"/>
+      </svg>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- Wave: cream → mint-light -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--mint-light)"/></svg></div>
+
+<!-- ===== FAQ ===== -->
+<section class="faq-sec">
+<div class="container">
+  <div class="section-header faq-header reveal" style="--i:0">
+    <p class="f-eye">FAQ</p>
+    <h2 class="f-h2">Questions We Get From SaaS Founders</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal" style="--i:1"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How is B2B Mint different from traditional SEO agencies?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">Most agencies chase keywords and backlinks. B2B Mint builds semantic authority systems — interconnected content structures that make Google and AI see you as the category leader. We don't do SEO for rankings. We engineer SEO for pipeline.</div></div></div>
+    <div class="faq-item reveal" style="--i:2"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long until we see results with B2B Mint?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">Most B2B Mint clients see ranking movement within 30–60 days. Pipeline impact typically starts around 90 days. We're not an overnight solution — we build infrastructure that compounds. But we move fast and prioritize bottom-funnel wins first.</div></div></div>
+    <div class="faq-item reveal" style="--i:3"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What's B2B Mint's minimum engagement?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">We start at $3,000/month with a minimum 3-month commitment. B2B Mint isn't a "try it and see" agency — it's a partnership. Real authority takes time to build, and we only work with SaaS brands ready to invest in compounding growth.</div></div></div>
+    <div class="faq-item reveal" style="--i:4"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does B2B Mint work with early-stage startups?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">B2B Mint works best with SaaS companies that have product-market fit and some existing traction. If you're pre-revenue or still validating, we might not be the right fit yet — but we're happy to revisit when you're ready to scale.</div></div></div>
+    <div class="faq-item reveal" style="--i:5"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How does B2B Mint measure success?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">Pipeline, SQLs, and revenue attribution — not vanity traffic. B2B Mint tracks rankings and organic growth, but we report on what your CFO actually cares about. If we can't trace it to revenue, it doesn't count.</div></div></div>
+    <div class="faq-item reveal" style="--i:6"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What's semantic SEO, and why does B2B Mint focus on it?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">Semantic SEO is how modern search engines and AI understand content. Instead of matching keywords, they evaluate entities, topical relationships, and authority signals. B2B Mint uses semantic architecture because it's what actually builds lasting authority — not just temporary rankings.</div></div></div>
+    <div class="faq-item reveal" style="--i:7"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can B2B Mint help us show up in ChatGPT and AI search?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">Yes — LLM and AI visibility is core to what B2B Mint does. We optimize your brand to be cited in ChatGPT, Perplexity, Gemini, and AI Overviews. Being indexed isn't enough anymore. B2B Mint makes sure you're recommended.</div></div></div>
+    <div class="faq-item reveal" style="--i:8"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What if we already have an in-house content team?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">B2B Mint works alongside internal teams all the time. We can own strategy and architecture while your team executes — or handle everything end-to-end. We'll build the model that fits your resources and gets results fastest.</div></div></div>
+    <div class="faq-item reveal" style="--i:9"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How is B2B Mint different from our last SEO agency?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">Most agencies optimize for metrics that make them look good — traffic, keywords, "visibility." B2B Mint only optimizes for pipeline. Every strategy, every piece of content, every technical fix is built to generate revenue you can trace. No vanity reports your CFO ignores.</div></div></div>
+    <div class="faq-item reveal" style="--i:10"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What happens if we don't see results with B2B Mint?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">If you don't see measurable traction within 90 days — ranking movement, traffic growth, pipeline attribution — B2B Mint keeps working until you do. We don't charge for hope. We charge for engines that work.</div></div></div>
+    <div class="faq-item reveal" style="--i:11"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">How many clients does B2B Mint take on?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">We take on 4 new clients per quarter. Not for exclusivity — because real engine-building requires focus. B2B Mint delivers exceptional results by not spreading thin.</div></div></div>
+    <div class="faq-item reveal" style="--i:12"><button class="faq-q" onclick="this.parentElement.classList.toggle('open')">What industries does B2B Mint specialize in?<svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><line x1="10" y1="4" x2="10" y2="16" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/><line x1="4" y1="10" x2="16" y2="10" stroke="var(--ink)" stroke-width="2" stroke-linecap="round"/></svg></button><div class="faq-a"><div class="faq-a-inner">B2B SaaS is our core focus. B2B Mint has worked across categories — email, healthcare, developer tools, HR tech, fintech, and more. The semantic methodology adapts, but the pipeline-first approach stays the same.</div></div></div>
+  </div>
+</div>
+</section>
+
+<!-- Wave: mint-light → ink -->
+<div class="wave-div" aria-hidden="true"><svg viewBox="0 0 1440 44" preserveAspectRatio="none"><path d="M0,22 C200,44 400,0 600,22 C800,44 1000,0 1200,22 C1320,36 1390,12 1440,22 L1440,44 L0,44Z" fill="var(--ink)"/></svg></div>
+
+<!-- ===== GUARANTEE ===== -->
+<section class="guarantee-sec">
+<div class="container">
+  <svg class="guarantee-shield" width="300" height="360" viewBox="0 0 300 360" fill="none" aria-hidden="true" style="animation:breathe 4s ease-in-out infinite">
+    <path d="M150,20 L270,80 L270,200 C270,280 210,340 150,360 C90,340 30,280 30,200 L30,80 Z" stroke="var(--cream)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M110,190 L135,220 L200,150" stroke="var(--cream)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <div class="section-header" style="position:relative;z-index:1">
+    <p class="f-eye reveal" style="--i:0;color:var(--mint-primary)">OUR GUARANTEE</p>
+    <h2 class="f-h2 reveal" style="--i:0;color:var(--cream)">"No Pipeline? We Work Free Until You Get It."</h2>
+    <p class="section-subhead reveal" style="--i:1;color:var(--warm-gray)">If you don't see ranking movement, traffic growth, and pipeline attribution within 90 days — B2B Mint keeps working at no extra cost until you do.</p>
+  </div>
+  <div class="reveal" style="--i:2;text-align:center;position:relative;z-index:1">
+    <a href="https://calendly.com/hamid-b2bmint/30min" class="btn btn-mint f-btn" target="_blank" rel="noopener" style="margin-top:40px">Book a Free Strategy Call →</a>
+  </div>
+</div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+<div class="container">
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo">b2bmint<svg class="nav-leaf" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" style="animation:sway 3s ease-in-out infinite"><path d="M8,14 C8,14 4,10 4,6 C4,3 6,1 8,1 C10,1 12,3 12,6 C12,10 8,14 8,14Z" fill="var(--mint-primary)" stroke="var(--ink)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8,4 L8,12" stroke="var(--ink)" stroke-width="1" stroke-linecap="round"/><path d="M8,6 L6,5" stroke="var(--ink)" stroke-width="0.8" stroke-linecap="round"/><path d="M8,8 L10,7" stroke="var(--ink)" stroke-width="0.8" stroke-linecap="round"/></svg></a>
+      <p class="footer-tagline">B2B Mint is the SEO agency for SaaS companies done with vanity metrics. We build authority systems that generate pipeline — in Google, AI search, and everywhere buyers look.</p>
+      <p class="footer-contact">+1 302-307-1030</p>
+      <p class="footer-contact">hamid@b2bmint.com</p>
+      <div class="footer-social">
+        <a href="#" aria-label="LinkedIn"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" style="animation:sway 3s ease-in-out infinite"><rect x="1" y="1" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M6,8 L6,14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="6" cy="5.5" r="1.2" fill="currentColor"/><path d="M10,8 L10,14 M10,10.5 C10,9 11,8 12.5,8 C14,8 14.5,9.2 14.5,10.5 L14.5,14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a href="#" aria-label="X/Twitter"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true" style="animation:sway 3s ease-in-out infinite;animation-delay:0.5s"><path d="M4,4 L9,11 L4,16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M16,4 L11,11 L16,16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-label">Company</p>
+      <a href="#">About Us</a><a href="#">Case Studies</a><a href="#">Case Study: Email Data Tool</a><a href="#">Case Study: Influencer Marketing Platform</a><a href="#">Case Study: Email Marketing Tool</a><a href="#">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-label">Resources</p>
+      <a href="#">SaaS SEO</a><a href="#">Blog</a><a href="#">AI Visibility for SaaS</a><a href="#">Why Your Content Isn't Converting</a><a href="#">Topical Authority for SaaS</a><a href="#">Newsletter</a>
+    </div>
+    <div class="footer-col">
+      <p class="footer-col-label">Contact</p>
+      <a href="mailto:hamid@b2bmint.com" style="color:var(--mint-accent)">hamid@b2bmint.com</a>
+      <a href="tel:+13023071030">+1 302-307-1030</a>
+      <a href="https://calendly.com/hamid-b2bmint/30min" target="_blank" rel="noopener">Book a Free Strategy Call →</a>
+      <div style="margin-top:12px">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true" style="animation:float-a 3s ease-in-out infinite">
+          <circle cx="20" cy="20" r="14" fill="none" stroke="var(--warm-gray)" stroke-width="2"/>
+          <circle cx="20" cy="20" r="6" fill="none" stroke="var(--warm-gray)" stroke-width="1.5"/>
+          <path d="M14,14 C16,12 18,14 20,14" stroke="var(--warm-gray)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M20,14 L20,20 L26,20" stroke="var(--warm-gray)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 B2BMint · Build Goat LLC (Delaware)</span>
+    <div><a href="#">Privacy</a><a href="#">Terms</a></div>
+  </div>
+</div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+(function(){
+  'use strict';
+
+  // Custom cursor
+  if(window.innerWidth > 768){
+    var dot = document.createElement('div');
+    dot.className = 'cursor-dot';
+    document.body.appendChild(dot);
+    document.addEventListener('mousemove', function(e){
+      dot.style.left = e.clientX + 'px';
+      dot.style.top = e.clientY + 'px';
+    });
+    document.querySelectorAll('a,button,.btn,.svc-card,.pain-card,.team-card,.blog-card,.faq-q').forEach(function(el){
+      el.addEventListener('mouseenter', function(){ dot.classList.add('big'); });
+      el.addEventListener('mouseleave', function(){ dot.classList.remove('big'); });
+    });
+  }
+
+  // Nav scroll
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 80) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, {passive:true});
+
+  // Mobile nav
+  var toggle = document.getElementById('nav-toggle');
+  var navLinks = document.getElementById('nav-links');
+  if(toggle){
+    toggle.addEventListener('click', function(){
+      navLinks.classList.toggle('open');
+    });
+  }
+
+  // Scroll reveal via IntersectionObserver
+  var revealObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting) e.target.classList.add('in-view');
+    });
+  }, {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(function(el){ revealObs.observe(el); });
+
+  // Stat counter
+  function runCounter(el){
+    var target = parseFloat(el.dataset.target);
+    var prefix = el.dataset.prefix || '';
+    var suffix = el.dataset.suffix || '';
+    var dur = 2200;
+    var start = performance.now();
+    var tick = function(now){
+      var p = Math.min((now - start) / dur, 1);
+      var ease = 1 - Math.pow(1 - p, 4);
+      var cur = ease * target;
+      var val = target < 10 ? (Number.isInteger(target) ? Math.round(cur) : cur.toFixed(1)) : Math.floor(cur).toLocaleString();
+      el.textContent = prefix + val + suffix;
+      if(p < 1) requestAnimationFrame(tick);
+      else el.textContent = prefix + (target >= 1000 ? target.toLocaleString() : target) + suffix;
+    };
+    requestAnimationFrame(tick);
+  }
+  var statObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting && !e.target.dataset.animated){
+        e.target.dataset.animated = 'true';
+        runCounter(e.target);
+      }
+    });
+  }, {threshold:0.5});
+  document.querySelectorAll('.num[data-target]').forEach(function(el){ statObs.observe(el); });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = this.closest('.faq-item');
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(o){ o.classList.remove('open'); });
+      if(!wasOpen) item.classList.add('open');
+    });
+  });
+
+})();
+</script>
+</body>
+</html>
